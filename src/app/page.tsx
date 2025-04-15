@@ -243,6 +243,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section Contact */}
+      <section id="contact" className={styles.contactSection}>
+        <div className={styles.skillsContainer}>
+          <h2 className={styles.skillsTitle}>
+            Contact
+            <div className={styles.skillsTitleUnderline}/>
+          </h2>
+          <div className={styles.contactContainer}>
+            <div className={styles.contactItem}>
+              <span>📧 Email :</span>
+              <a href="mailto:e.mortier@proton.me" className={styles.contactLink}>
+                e.mortier@proton.me
+              </a>
+            </div>
+            <div className={styles.contactItem}>
+              <span>🔗 LinkedIn :</span>
+              <a 
+                href="https://www.linkedin.com/in/esteban-mortier/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.contactLink}
+              >
+                Esteban Mortier
+              </a>
+            </div>
+            <div className={styles.contactItem}>
+              <span>🐙 GitHub :</span>
+              <a 
+                href="https://github.com/Esteban-Mo" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.contactLink}
+              >
+                Esteban-Mo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className={styles.footer}>
+        <p>© 2025 Esteban Mortier - Portfolio.</p>
+      </footer>
+
     </div>
   );
 }

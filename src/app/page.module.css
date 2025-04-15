@@ -417,4 +417,65 @@
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Reuses .skillCardEmoji, .skillCardTitle, .skillCardDescription, .skillCardChips */ 
+/* Reuses .skillCardEmoji, .skillCardTitle, .skillCardDescription, .skillCardChips */
+
+/* Styles for Contact Section */
+.contactSection {
+  width: 100%;
+  padding: 4rem 1rem 6rem; /* Add more padding at the bottom */
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  background-color: rgba(14, 15, 18, 0.3); /* Slightly darker bg */
+}
+
+/* Reuses .skillsContainer, .skillsTitle, .skillsTitleUnderline */
+
+.contactContainer {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+  gap: 1.5rem;
+  margin-top: 2rem; /* Space below title */
+  color: #e2e8f0; /* slate-200 */
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.contactItem span:first-child { /* Style the label part */
+  color: #cbd5e1; /* slate-300 */
+  font-weight: 500;
+}
+
+.contactLink {
+  color: #60A5FA; /* Tailwind blue-400 */
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #93c5fd; /* Tailwind blue-300 */
+  text-decoration: underline;
+}
+
+/* Styles for Footer */
+.footer {
+  width: 100%;
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+  text-align: center;
+  color: #94a3b8; /* slate-400 */
+  font-size: 0.9rem;
+  background-color: rgba(14, 15, 18, 0.5); /* Match contact section bg */
+  z-index: 1;
+}
+
+.footer p {
+  margin: 0;
+} 
