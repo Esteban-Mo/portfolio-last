@@ -23,7 +23,8 @@ const skillsData = [
     title: "Systèmes Géographiques", 
     description: "Manipulation et visualisation de données géospatiales interactives.", 
     chips: ["Leaflet", "GeoServer"],
-    emoji: "🗺️"
+    emoji: "🗺️",
+    link: "/skills/geographics"
   },
   { 
     title: "Base de Données", 
