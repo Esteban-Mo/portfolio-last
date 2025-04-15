@@ -262,6 +262,11 @@
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Add this rule for clickable cards */
+.clickableCard {
+  cursor: pointer;
+}
+
 .skillCardTitle {
   font-size: 1.25rem;
   font-weight: 600;

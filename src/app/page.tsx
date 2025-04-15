@@ -29,7 +29,8 @@ const skillsData = [
     title: "Base de Données", 
     description: "Gestion et interrogation de données relationnelles et NoSQL.", 
     chips: ["PostgreSQL", "MongoDB"],
-    emoji: "🗄️"
+    emoji: "🗄️",
+    link: "/skills/databases"
   },
   { 
     title: "Documentation", 
@@ -145,7 +146,11 @@ export default function Home() {
           </h2>
           <div className={styles.skillsGrid}>
             {skillsData.map((skill, index) => (
-              <div key={index} className={styles.skillCard}>
+              <div 
+                key={index} 
+                className={`${styles.skillCard} ${skill.link ? styles.clickableCard : ''}`}
+                onClick={skill.link ? () => router.push(skill.link) : undefined}
+              >
                 <span className={styles.skillCardEmoji}>{skill.emoji}</span>
                 <h3 className={styles.skillCardTitle}>{skill.title}</h3>
                 <p className={styles.skillCardDescription}>{skill.description}</p>
