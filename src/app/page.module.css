@@ -9,8 +9,8 @@
 
 .heroSection {
   width: 100%;
-  /* Adjusted min-height to account for header height (70px) */
-  min-height: calc(100vh - 70px);
+  /* Revert to full viewport height */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +48,7 @@
 
 .scrollIndicator {
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 1.44rem; /* Moved up by approx 15px */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
