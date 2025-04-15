@@ -47,6 +47,39 @@ const humanSkillsData = [
   { title: "Méthode Agile", description: "Adaptabilité aux changements et application des principes agiles (Scrum).", emoji: "🔄"}
 ];
 
+const projectsData = [
+  {
+    title: "BDD Turbine",
+    description: "Application web pour la création et la gestion avancée de données techniques de turbines éoliennes.",
+    chips: ["React", "Next.js", "Prisma", "PostgreSQL", "TypeScript", "Python"],
+    emoji: "⚙️"
+  },
+  {
+    title: "Atlas Eolien",
+    description: "Plateforme de visualisation de données géospatiales éoliennes sur carte dynamique avec panneau d'informations interactif.",
+    chips: ["React", "Next.js", "Prisma", "PostgreSQL", "TypeScript", "GeoServer", "Leaflet"],
+    emoji: "🗺️"
+  },
+  {
+    title: "Agence Walker",
+    description: "Site web de gestion immobilière incluant la visualisation de biens sur une carte dynamique.",
+    chips: ["React", "Next.js", "Prisma", "MongoDB", "TypeScript", "Leaflet"],
+    emoji: "🏠"
+  },
+  {
+    title: "Module Foncier (Act)",
+    description: "Application métier pour la gestion centralisée des données foncières d'une entreprise.",
+    chips: ["React", "Next.js", "Prisma", "PostgreSQL", "TypeScript"],
+    emoji: "📜"
+  },
+  {
+    title: "Domaine Georges Roumier",
+    description: "Site vitrine pour un domaine viticole, présentant les vins et une carte dynamique des points de vente.",
+    chips: ["React", "Next.js", "Prisma", "MongoDB", "TypeScript", "Leaflet"],
+    emoji: "🍇"
+  }
+];
+
 export default function Home() {
   const router = useRouter(); // Initialize useRouter
 
@@ -169,6 +202,47 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Section Réalisations */}
+      <section id="projects" className={styles.projectsSection}>
+        <div className={styles.skillsContainer}>
+          <h2 className={styles.skillsTitle}>
+            Réalisations
+            <div className={styles.skillsTitleUnderline}/>
+          </h2>
+          <div className={styles.projectsGrid}>
+            {projectsData.map((project, index) => (
+              <div key={index} className={styles.projectCard}>
+                <span className={styles.skillCardEmoji}>{project.emoji}</span>
+                <h3 className={styles.skillCardTitle}>{project.title}</h3>
+                <p className={styles.skillCardDescription}>{project.description}</p>
+                <div className={styles.skillCardChips}>
+                  {project.chips.map((chip, chipIndex) => (
+                    <Chip 
+                      key={chipIndex} 
+                      label={chip} 
+                      variant="outlined" 
+                      size="small"
+                      sx={{ 
+                        color: '#e2e8f0', 
+                        borderColor: 'rgba(148, 163, 184, 0.3)',
+                        backgroundColor: 'rgba(100, 116, 139, 0.1)',
+                        fontSize: '0.75rem',
+                        borderRadius: '4px',
+                        margin: '0.2rem',
+                        '&:hover': {
+                          backgroundColor: 'rgba(100, 116, 139, 0.2)',
+                        }
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
