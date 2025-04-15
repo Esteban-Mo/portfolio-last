@@ -1,4 +1,7 @@
+import Chip from '@mui/material/Chip';
 import styles from './page.module.css';
+
+const pageChips = ["PostgreSQL", "MongoDB"];
 
 export default function DatabaseSkillPage() {
   return (
@@ -6,6 +9,28 @@ export default function DatabaseSkillPage() {
       <div className={styles.backgroundEmoji}>🗄️</div>
 
       <h1 className={styles.mainTitle}>Compétence : Base de Données</h1>
+
+      <div className={styles.chipContainer}>
+        {pageChips.map((chip, index) => (
+          <Chip 
+            key={index} 
+            label={chip} 
+            variant="outlined" 
+            size="small"
+            sx={{
+              color: '#e2e8f0', 
+              borderColor: 'rgba(148, 163, 184, 0.3)',
+              backgroundColor: 'rgba(100, 116, 139, 0.1)',
+              borderRadius: '4px',
+              fontSize: '0.85rem',
+              margin: '0.3rem',
+              '&:hover': {
+                backgroundColor: 'rgba(100, 116, 139, 0.2)',
+              }
+            }}
+          />
+        ))}
+      </div>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Ma définition</h2>

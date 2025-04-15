@@ -1,4 +1,7 @@
+import Chip from '@mui/material/Chip'; // Import Chip
 import styles from './page.module.css'; // Reuse the same CSS module structure
+
+const pageChips = ["Leaflet", "GeoServer"]; // Define chips for this page
 
 export default function GeographicsSkillPage() {
   return (
@@ -6,6 +9,29 @@ export default function GeographicsSkillPage() {
       <div className={styles.backgroundEmoji}>🗺️</div> {/* Background Emoji */}
 
       <h1 className={styles.mainTitle}>Compétence : Systèmes Géographiques</h1>
+
+      {/* Chip Container */}
+      <div className={styles.chipContainer}>
+        {pageChips.map((chip, index) => (
+          <Chip 
+            key={index} 
+            label={chip} 
+            variant="outlined" 
+            size="small"
+            sx={{ /* Reusing Chip styles */
+              color: '#e2e8f0', 
+              borderColor: 'rgba(148, 163, 184, 0.3)',
+              backgroundColor: 'rgba(100, 116, 139, 0.1)',
+              borderRadius: '4px',
+              fontSize: '0.85rem',
+              margin: '0.3rem',
+              '&:hover': {
+                backgroundColor: 'rgba(100, 116, 139, 0.2)',
+              }
+            }}
+          />
+        ))}
+      </div>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Ma définition</h2>

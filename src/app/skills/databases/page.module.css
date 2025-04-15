@@ -30,6 +30,15 @@
   font-weight: 700;
 }
 
+.chipContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Spacing between chips */
+  margin-bottom: 2.5rem; /* Space below chips, before first section */
+}
+
 .section {
   margin-bottom: 2.5rem; /* Space between sections */
 }
