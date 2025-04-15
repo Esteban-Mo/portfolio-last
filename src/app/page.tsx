@@ -39,7 +39,8 @@ const skillsData = [
     title: "Documentation", 
     description: "Outils essentiels pour une documentation claire et une collaboration efficace.", 
     chips: ["Notion", "Markdown"],
-    emoji: "📝"
+    emoji: "📝",
+    link: "/skills/documentation"
   }
 ];
 
