@@ -10,36 +10,41 @@ const skillsData = [
   { 
     title: "Framework & Librairies", 
     description: "Outils modernes pour construire des applications web robustes et performantes.", 
-    chips: ["React", "Next.js", "Prisma"]
+    chips: ["React", "Next.js", "Prisma"],
+    emoji: "📚" 
   },
   { 
     title: "Langages de Programmation", 
     description: "Langages polyvalents pour le développement front-end, back-end et scripting.", 
-    chips: ["TypeScript", "Python"]
+    chips: ["TypeScript", "Python"],
+    emoji: "</>" 
   },
   { 
     title: "Systèmes Géographiques", 
     description: "Manipulation et visualisation de données géospatiales interactives.", 
-    chips: ["Leaflet", "GeoServer"]
+    chips: ["Leaflet", "GeoServer"],
+    emoji: "🗺️"
   },
   { 
     title: "Base de Données", 
     description: "Gestion et interrogation de données relationnelles et NoSQL.", 
-    chips: ["PostgreSQL", "MongoDB"]
+    chips: ["PostgreSQL", "MongoDB"],
+    emoji: "🗄️"
   },
   { 
     title: "Documentation", 
     description: "Outils essentiels pour une documentation claire et une collaboration efficace.", 
-    chips: ["Notion", "Markdown"]
+    chips: ["Notion", "Markdown"],
+    emoji: "📝"
   }
 ];
 
 const humanSkillsData = [
-  { title: "Autonomie", description: "Capacité à travailler de manière indépendante et à prendre des initiatives."}, 
-  { title: "Communication", description: "Aptitude à échanger clairement des informations et à collaborer efficacement."},
-  { title: "Organisation", description: "Faculté de structurer le travail, de gérer les priorités et de respecter les délais."},
-  { title: "Travail d'équipe", description: "Disposition à coopérer avec les autres pour atteindre des objectifs communs."},
-  { title: "Méthode Agile", description: "Adaptabilité aux changements et application des principes agiles (Scrum)."}
+  { title: "Autonomie", description: "Capacité à travailler de manière indépendante et à prendre des initiatives.", emoji: "💡"}, 
+  { title: "Communication", description: "Aptitude à échanger clairement des informations et à collaborer efficacement.", emoji: "🗣️"},
+  { title: "Organisation", description: "Faculté de structurer le travail, de gérer les priorités et de respecter les délais.", emoji: "📅"},
+  { title: "Travail d'équipe", description: "Disposition à coopérer avec les autres pour atteindre des objectifs communs.", emoji: "🤝"},
+  { title: "Méthode Agile", description: "Adaptabilité aux changements et application des principes agiles (Scrum).", emoji: "🔄"}
 ];
 
 export default function Home() {
@@ -108,6 +113,7 @@ export default function Home() {
           <div className={styles.skillsGrid}>
             {skillsData.map((skill, index) => (
               <div key={index} className={styles.skillCard}>
+                <span className={styles.skillCardEmoji}>{skill.emoji}</span>
                 <h3 className={styles.skillCardTitle}>{skill.title}</h3>
                 <p className={styles.skillCardDescription}>{skill.description}</p>
                 <div className={styles.skillCardChips}>
@@ -151,6 +157,7 @@ export default function Home() {
           <div className={styles.humanSkillsGrid}>
             {humanSkillsData.map((skill, index) => (
               <div key={index} className={styles.humanSkillCard}>
+                <span className={styles.humanSkillCardEmoji}>{skill.emoji}</span>
                 <h3 className={styles.humanSkillCardTitle}>{skill.title}</h3>
                 <p className={styles.humanSkillCardDescription}>{skill.description}</p>
                 <a href="#" className={`${styles.skillCardLink} ${styles.humanSkillCardLink}`}>

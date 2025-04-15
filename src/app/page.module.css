@@ -301,6 +301,16 @@
   opacity: 1;
 }
 
+.skillCardEmoji {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 2rem;
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
 /* Re-use existing learnMoreArrow or define if needed */
 /* .learnMoreArrow { font-size: 1.2rem; } */
 
@@ -333,11 +343,23 @@
   gap: 1rem;
   transition: transform 0.3s ease, border-color 0.3s ease;
   min-height: 180px; /* Adjust as needed */
+  position: relative; /* Ensure positioning context for emoji */
+  overflow: hidden; /* Hide potential overflow from emoji */
 }
 
 .humanSkillCard:hover {
   transform: translateY(-5px);
   border-color: rgba(255, 255, 255, 0.2);
+}
+
+.humanSkillCardEmoji {
+  position: absolute;
+  top: 0.75rem; /* Adjust spacing from top */
+  right: 0.75rem; /* Adjust spacing from right */
+  font-size: 2rem; /* Adjust emoji size */
+  opacity: 0.5; /* 50% opacity */
+  z-index: 0; /* Behind content if needed, but likely fine */
+  pointer-events: none; /* Don't interfere with hover */
 }
 
 .humanSkillCardTitle {
