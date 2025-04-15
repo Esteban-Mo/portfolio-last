@@ -99,6 +99,7 @@
 
     .desktopNav {
         display: flex;
+        margin-right: 2rem;
     }
 
     .mobileMenu {
