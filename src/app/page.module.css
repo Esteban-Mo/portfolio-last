@@ -114,4 +114,83 @@
   .title {
     font-size: 1.5rem;
   }
+}
+
+/* Styles for Presentation Section */
+.presentationSection {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4rem 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1; /* Ensure it's above StarryBackground if needed */
+}
+
+.presentationSection:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.presentationContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.presentationTitle {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.presentationTitleUnderline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #60A5FA; /* Tailwind blue-400 */
+  border-radius: 2px;
+}
+
+.presentationTextContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.8;
+  text-align: justify;
+  position: relative;
+}
+
+.learnMoreLink {
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  color: #60A5FA; /* Tailwind blue-400 */
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.presentationSection:hover .learnMoreLink {
+  opacity: 1; /* Make link more visible on hover */
+}
+
+.learnMoreArrow {
+  font-size: 1.2rem;
 } 
