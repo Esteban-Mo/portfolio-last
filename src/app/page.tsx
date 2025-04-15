@@ -47,7 +47,7 @@ const humanSkillsData = [
   { title: "Autonomie", description: "Capacité à travailler de manière indépendante et à prendre des initiatives.", emoji: "💡"}, 
   { title: "Communication", description: "Aptitude à échanger clairement des informations et à collaborer efficacement.", emoji: "🗣️"},
   { title: "Organisation", description: "Faculté de structurer le travail, de gérer les priorités et de respecter les délais.", emoji: "📅"},
-  { title: "Travail d'équipe", description: "Disposition à coopérer avec les autres pour atteindre des objectifs communs.", emoji: "🤝"},
+  { title: "Travail d'équipe", description: "Disposition à coopérer avec les autres pour atteindre des objectifs communs.", emoji: "🤝", link: "/skills/teamwork"},
   { title: "Méthode Agile", description: "Adaptabilité aux changements et application des principes agiles (Scrum).", emoji: "🔄", link: "/skills/agile"}
 ];
 
