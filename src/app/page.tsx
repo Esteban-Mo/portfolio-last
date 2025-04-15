@@ -11,13 +11,15 @@ const skillsData = [
     title: "Framework & Librairies", 
     description: "Outils modernes pour construire des applications web robustes et performantes.", 
     chips: ["React", "Next.js", "Prisma"],
-    emoji: "📚" 
+    emoji: "📚",
+    link: "/skills/frameworks"
   },
   { 
     title: "Langages de Programmation", 
     description: "Langages polyvalents pour le développement front-end, back-end et scripting.", 
     chips: ["TypeScript", "Python"],
-    emoji: "</>" 
+    emoji: "</>",
+    link: "/skills/programming"
   },
   { 
     title: "Systèmes Géographiques", 
