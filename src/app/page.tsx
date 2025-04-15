@@ -50,7 +50,12 @@ const humanSkillsData = [
     emoji: "💡",
     link: "/skills/autonomy"
   }, 
-  { title: "Communication", description: "Aptitude à échanger clairement des informations et à collaborer efficacement.", emoji: "🗣️"},
+  { 
+    title: "Communication", 
+    description: "Aptitude à échanger clairement des informations et à collaborer efficacement.", 
+    emoji: "🗣️",
+    link: "/skills/communication"
+  },
   { title: "Organisation", description: "Faculté de structurer le travail, de gérer les priorités et de respecter les délais.", emoji: "📅", link: "/skills/organization"},
   { title: "Travail d'équipe", description: "Disposition à coopérer avec les autres pour atteindre des objectifs communs.", emoji: "🤝", link: "/skills/teamwork"},
   { title: "Méthode Agile", description: "Adaptabilité aux changements et application des principes agiles (Scrum).", emoji: "🔄", link: "/skills/agile"}
