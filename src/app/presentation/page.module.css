@@ -1,0 +1,49 @@
+.container {
+  max-width: 900px; /* Content width */
+  margin: 0 auto; /* Center content */
+  padding: 3rem 1rem 6rem; /* Top, horizontal, bottom padding */
+  color: #e2e8f0; /* Default text color (slate-200) */
+  line-height: 1.7;
+  position: relative; 
+  overflow: hidden; 
+  z-index: 1; 
+}
+
+.mainTitle {
+  font-size: clamp(2.5rem, 6vw, 3.5rem); /* Responsive title size */
+  color: #fff;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.section {
+  margin-bottom: 2.5rem; /* Space between sections */
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #60A5FA; /* Underline like homepage titles */
+  display: inline-block; /* Make underline fit content */
+}
+
+.section p {
+  margin-bottom: 1rem;
+  color: #cbd5e1; /* Lighter text (slate-300) */
+  text-align: justify;
+}
+
+.list {
+  list-style: disc; /* Standard bullet points */
+  padding-left: 2rem; /* Indentation */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+} 
