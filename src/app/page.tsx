@@ -67,7 +67,8 @@ const projectsData = [
     title: "BDD Turbine",
     description: "Application web pour la création et la gestion avancée de données techniques de turbines éoliennes.",
     chips: ["React", "Next.js", "Prisma", "PostgreSQL", "TypeScript", "Python"],
-    emoji: "⚙️"
+    emoji: "⚙️",
+    link: "/projects/bdd-turbine"
   },
   {
     title: "Atlas Eolien",
@@ -235,7 +236,11 @@ export default function Home() {
           </h2>
           <div className={styles.projectsGrid}>
             {projectsData.map((project, index) => (
-              <div key={index} className={styles.projectCard}>
+              <div 
+                key={index} 
+                className={`${styles.projectCard} ${project.link ? styles.clickableCard : ''}`}
+                onClick={project.link ? () => router.push(project.link) : undefined}
+              >
                 <span className={styles.skillCardEmoji}>{project.emoji}</span>
                 <h3 className={styles.skillCardTitle}>{project.title}</h3>
                 <p className={styles.skillCardDescription}>{project.description}</p>
@@ -248,7 +253,7 @@ export default function Home() {
                       size="small"
                       sx={{ 
                         color: '#e2e8f0', 
-                        borderColor: 'rgba(148, 163, 184, 0.3)',
+                        borderColor: 'rgba(148, 163, 184, 0.3)', 
                         backgroundColor: 'rgba(100, 116, 139, 0.1)',
                         fontSize: '0.75rem',
                         borderRadius: '4px',
@@ -260,6 +265,12 @@ export default function Home() {
                     />
                   ))}
                 </div>
+                {project.link && (
+                  <a href="#" className={`${styles.skillCardLink} ${styles.projectCardLink}`}>
+                    <span>Voir le projet</span>
+                    <span className={styles.learnMoreArrow}>→</span>
+                  </a>
+                )}
               </div>
             ))}
           </div>
