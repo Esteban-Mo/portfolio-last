@@ -87,7 +87,8 @@ const projectsData = [
     title: "Module Foncier (Act)",
     description: "Application métier pour la gestion centralisée des données foncières d'une entreprise.",
     chips: ["React", "Next.js", "Prisma", "PostgreSQL", "TypeScript"],
-    emoji: "📜"
+    emoji: "📜",
+    link: "/projects/module-foncier"
   },
   {
     title: "Domaine Georges Roumier",
