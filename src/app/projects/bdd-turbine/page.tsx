@@ -48,7 +48,7 @@ export default function BddTurbinePage() {
   return (
     <div className={styles.container}>
       {/* Optional: Background Emoji or Icon */}
-      {/* <div className={styles.backgroundEmoji}>⚙️</div> */}
+      <div className={styles.backgroundEmoji}>⚙️</div>
 
       <h1 className={styles.mainTitle}>Réalisation : BDD Turbine</h1>
 
