@@ -74,7 +74,8 @@ const projectsData = [
     title: "Atlas Eolien",
     description: "Plateforme de visualisation de données géospatiales éoliennes sur carte dynamique avec panneau d'informations interactif.",
     chips: ["React", "Next.js", "Prisma", "PostgreSQL", "TypeScript", "GeoServer", "Leaflet"],
-    emoji: "🗺️"
+    emoji: "🗺️",
+    link: "/projects/atlas"
   },
   {
     title: "Agence Walker",
