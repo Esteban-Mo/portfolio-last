@@ -36,13 +36,13 @@ export default function GeographicsSkillPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Ma definition</h2>
         <p>
-          Les systèmes géographiques sont des outils essentiels dès qu'un projet implique de manipuler, afficher ou distribuer des données spatiales : coordonnées, adresses, surfaces , couches superposées, etc. Dans mon cas , je les ai utilisés dans plusieurs contextes réels — que ce soit pour des domaines viticoles, de l'immobilier ou de la production énergétique — ce qui m'a permis de bien cerner l'utilité concrète de la cartographie dans un projet web .
+          Les systèmes géographiques sont des outils essentiels dès qu'un projet implique de manipuler, afficher ou distribuer des données spatiales : coordonnées, adresses, surfaces​, couches superposées, etc. Dans mon cas​, je les ai utilisés dans plusieurs contextes réels — que ce soit pour des domaines viticoles, de l'immobilier ou de la production énergétique — ce qui m'a permis de bien cerner l'utilité concrète de la cartographie dans un projet web​.
         </p>
         <p>
           J'ai principalement utilise deux technologies complémentaires :
         </p>
         <ul className={styles.list}>
-            <li>Leaflet, une librairie JavaScript permettant d'afficher des cartes interactives dynamiques dans une interface web .</li>
+            <li>Leaflet, une librairie JavaScript permettant d'afficher des cartes interactives dynamiques dans une interface web​.</li>
             <li>GeoServer, un serveur open-source qui permet d'héberger, traiter et distribuer des données géospatiales via des protocoles comme WMS.</li>
         </ul>
         <p>
@@ -56,12 +56,12 @@ export default function GeographicsSkillPage() {
           J'ai été amené à travailler avec ces outils sur trois projets distincts :
         </p>
         <ul className={styles.list}>
-            <li>Le premier, pour le domaine George Roumier, où il faillait afficher dynamiquement les parcelles de vignes sur une carte .</li>
+            <li>Le premier, pour le domaine George Roumier, où il faillait afficher dynamiquement les parcelles de vignes sur une carte​.</li>
             <li>Le second, pour l'agence immobilière Walker, où il s'agissait d'afficher les biens immobiliers selon leur adresse.</li>
             <li>Et enfin, le plus complet, le projet Atlas en alternance, qui représentait des données environnementales complexes : vitesse du vent, températures, position d'éoliennes, etc.</li>
         </ul>
         <p>
-          Sur tous ces projets, Leaflet était utilise côté front pour l'affichage dynamique et interactif. Pour Atlas, j'ai dû intégrer GeoServer, qui servait à héberger et diffuser des données spatiales lourdes en WMS, notamment des couches sur le vent ou la topographie .
+          Sur tous ces projets, Leaflet était utilise côté front pour l'affichage dynamique et interactif. Pour Atlas, j'ai dû intégrer GeoServer, qui servait à héberger et diffuser des données spatiales lourdes en WMS, notamment des couches sur le vent ou la topographie​.
         </p>
         <p>
           Dans certains cas, les données étaient directement en base PostgreSQL, mais dès qu'il s'agissait de traitements géographiques lourds ou de couches multiples, GeoServer devenait indispensable.
@@ -80,23 +80,23 @@ export default function GeographicsSkillPage() {
           À l'inverse, GeoServer reste une zone plus floue pour moi. Je l'ai utilise parce que le projet le nécessitait, mais je ne le trouve ni simple, ni agreable à manipuler. Il demande des connaissances spécifiques en SIG (systèmes d'information géographiques) que je n'avais pas, et qui ne sont pas forcément utilises dans tous les contextes de dev.
         </p>
         <p>
-          Côté données, j'ai surtout travailler avec des fichiers shapefile ou via des services WMS. J'ai appris à les manipuler, à les intégrer dans une carte interactive, et à les adapter selon les besoins du client.
+          Côté données, j'ai surtout travailler avec des fichiers shapefile ou via des services WMS​. J'ai appris à les manipuler​, à les intégrer dans une carte interactive, et à les adapter selon les besoins du client.
         </p>
         <p>
-          Globalement, la cartographie est une compétence que j'aime bien mobiliser quand le projet s'y prête, mais je reste selectif dans les outils que j'utilise : Leaflet, oui ; GeoServer, seulement si je n'ai pas le choix.
+          Globalement, la cartographie est une compétence que j'aime bien mobiliser quand le projet s'y prête, mais je reste selectif dans les outils que j'utilise : Leaflet​, oui ; GeoServer​, seulement si je n'ai pas le choix.
         </p>
       </section>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mon évolution dans cette compétence</h2>
         <p>
-          Je compte continuer à progresser sur Leaflet, car c'est une techno que j'apprécie, qui a beaucoup de potentiel, et qui me permet de créer des interfaces web plus riches.
+          Je compte continuer à progresser sur Leaflet​, car c'est une techno que j'apprécie​, qui a beaucoup de potentiel, et qui me permet de créer des interfaces web plus riches​.
         </p>
         <p>
-          En revanche, je ne prévois pas de m'investir davantage dans GeoServer, sauf si un futur projet m'y oblige. Si besoin, je prendrai le temps de creuser les alternatives plus modernes et flexibles (comme Mapbox, OpenLayers ou Turf.js).
+          En revanche, je ne prévois pas de m​'​investir davantage dans GeoServer​, sauf si un futur projet m'y oblige. Si besoin​, je prendrai le temps de creuser les alternatives plus modernes et flexibles (​comme Mapbox​, OpenLayers ou Turf.js​).
         </p>
         <p>
-          Aujourd'hui, je ne travaille plus sur de projets de cartographie, mais je garde cette compétence en tête, prête à être réactivée. Je considère que c'est un complément utile à mon profil fullstack, surtout dans des contextes où la visualisation géospatiale apporte une vraie valeur ajoutée au projet.
+          Aujourd'​hui​, je ne travaille plus sur de projets de cartographie​, mais je garde cette compétence en tête​​, prête à être réactivée. Je considère que c​'est un complément utile à mon profil fullstack​​, surtout dans des contextes où la visualisation géospatiale apporte une vraie valeur ajoutée au pro​jet.
         </p>
       </section>
     </div>

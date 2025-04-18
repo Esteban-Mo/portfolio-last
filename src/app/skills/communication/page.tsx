@@ -26,10 +26,10 @@ export default function CommunicationSkillPage() {
           Deux projets réalisés en alternance m'ont permis de développer cette compétence. Le premier, nommé "BDD Turbine", était à la fois un projet de développement et une gestion de relation client, le tout en autonomie. J'ai dû alterner entre des réunions avec le client et des points techniques avec mon tech lead.
         </p>
         <p>
-          Ma mission était d'écouter les besoins du client, de les formaliser, de les valider avec lui, puis de passer au développement. Ce processus était cyclique, basé sur des itérations successives, pour avancer progressivement sur le projet. En plus de mon responsable, j'ai aussi échangé à plusieurs reprises avec des utilisateurs finaux qui m'ont fait des retours directs.
+          Ma mission était d'écouter les besoins du client, de les formaliser​, de les valider avec lui, puis de passer au développement. Ce processus était cyclique, basé sur des itérations successives, pour avancer progressivement sur le projet. En plus de mon responsable, j'ai aussi échangé à plusieurs reprises avec des utilisateurs finaux qui m'ont fait des retours directs.
         </p>
         <p>
-          Par moments, le client avait tendance à ramener ses attentes à ses habitudes sur Excel, ce qui brouillait la vision du nouveau projet. J'ai donc dû plusieurs fois reprendre certains points avec lui pour lui faire comprendre qu'il s'agissait ici d'un nouvel outil, pas d'une simple copie. Le projet est aujourd'hui un élément central dans la gestion de leurs données, et les retours ont été très positifs, autant sur le livrable que sur la qualité des échanges que j'ai su instaurer.
+          Par moments, le client avait tendance à ramener ses attentes à ses habitudes sur Excel, ce qui brouillait la vision du nouveau projet. J'ai donc dû plusieurs fois reprendre certains points avec lui pour lui faire comprendre qu'il s'agissait ici d'un nouvel outil​, pas d'une simple copie​. Le projet est aujourd'hui un élément central dans la gestion de leurs données, et les retours ont été très positifs, autant sur le livrable que sur la qualité des échanges que j'ai su instaurer.
         </p>
         <p>
           Le second projet, "Atlas", a également été réalisé en autonomie complète. Là encore, j'étais directement en contact avec le client. Mais cette fois, le défi principal était l'indécision du client et de son équipe. Il m'est arrivé de devoir modifier plusieurs fois l'existant car ils n'étaient pas sûrs de ce qu'ils voulaient. C'est dans ce contexte que j'ai appris à dire "non", à poser des limites et à demander au client d'organiser une réunion interne afin qu'ils soient certains de leurs besoins avant de poursuivre.
@@ -42,26 +42,26 @@ export default function CommunicationSkillPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mon autocritique</h2>
         <p>
-          Aujourd'hui, j'estime que mon niveau en communication est situé entre intermédiaire et confirmé. J'ai plusieurs forces qui me permettent d'être efficace dans ce domaine. Je n'ai pas peur de prendre l'initiative de communiquer, de dire quand je ne sais pas ou quand je n'ai pas compris. Cela me permet de gagner du temps et d'être bien plus pertinent dans mes réponses et mes actions. Une autre de mes forces est ma capacité à m'exprimer de manière claire et structurée.
+          Aujourd'hui, j'estime que mon niveau en communication est situé entre intermédiaire et confirmé. J'ai plusieurs forces qui me permettent d'être efficace dans ce domaine. Je n'ai pas peur de prendre l'initiative de communiquer​, de dire quand je ne sais pas ou quand je n'ai pas compris. Cela me permet de gagner du temps et d'être bien plus pertinent dans mes réponses et mes actions. Une autre de mes forces est ma capacité à m'exprimer de manière claire et structurée​.
         </p>
         <p>
-          Cependant, j'ai encore une marge de progression. Un point à améliorer serait ma prise de parole en grand comité, ainsi que ma capacité à condenser mes propos pour aller plus rapidement à l'essentiel. Ce sont des aspects importants que je compte travailler pour gagner en impact.
+          Cependant, j'ai encore une marge de progression​. Un point à améliorer serait ma prise de parole en grand comité, ainsi que ma capacité à condenser mes propos pour aller plus rapidement à l'essentiel. Ce sont des aspects importants que je compte travailler pour gagner en impact.
         </p>
         <p>
-          Il m'arrive parfois de mal communiquer sur des détails mineurs, mais cela reste sans réel impact pour le moment.
+          Il m'arrive parfois de mal communiquer sur des détails mineurs, mais cela reste sans réel impact pour le moment​.
         </p>
       </section>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mon évolution dans cette compétence</h2>
         <p>
-          Dans la perspective de devenir Tech Lead, la communication sera au cœur de mon métier. Elle me permettra de piloter des projets efficacement, de guider les membres de mon équipe, et d'assurer un lien fluide entre les différentes parties prenantes.
+          Dans la perspective de devenir Tech Lead, la communication sera au cœur de mon métier​. Elle me permettra de piloter des projets efficacement, de guider les membres de mon équipe, et d'assurer un lien fluide entre les différentes parties prenantes​.
         </p>
         <p>
-          Pour continuer à progresser, je m'efforce de communiquer toujours plus, dans tous les contextes professionnels. Je pratique aussi le jeu de rôle, qui est un excellent exercice pour améliorer sa capacité à s'exprimer avec clarté et assurance dans des situations variées.
+          Pour continuer à progresser, je m'efforce de communiquer toujours plus, dans tous les contextes professionnels. Je pratique aussi le jeu de rôle, qui est un excellent exercice pour améliorer sa capacité à s'exprimer avec clarté et assurance dans des situations variées​.
         </p>
         <p>
-          Enfin, j'ai un objectif important à moyen terme : améliorer considérablement mon anglais, car la communication en anglais est aujourd'hui indispensable pour évoluer dans un environnement technique international. Cela me sera particulièrement utile pour des postes à responsabilités, comme celui de Tech Lead.
+          Enfin​, j'ai un objectif important à moyen terme : améliorer considérablement mon anglais​, car la communication en anglais est aujourd'hui indispensable pour évoluer dans un environnement technique international​. Cela me sera particulièrement utile pour des postes à responsabilités, comme celui de Tech Lead​.
         </p>
       </section>
     </div>

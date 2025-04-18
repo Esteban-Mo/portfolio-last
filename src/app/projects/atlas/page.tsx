@@ -94,12 +94,19 @@ export default function AtlasPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>1 – INTRODUCTION : APRÈS BDD TURBINE, PLACE À ATLAS !</h2>
         <p>
-          Après l'aventure BDD Turbine, ma deuxième grosse mission pendant mon alternance chez Valeco (qui a démarré en septembre 2023), ça a été le développement d'une application baptisée Atlas.
-Valeco, toujours à fond dans les énergies renouvelables en France, a un Bureau d'Études (le BE) qui manipule toutes sortes de données. Pour ce projet Atlas, le besoin venait très spécifiquement de l'équipe qui s'occupe de cartographie au sein de ce BE.
-Atlas, c'est une application web que j'ai développée pour visualiser des données géographiques cruciales pour Valeco : le relief des terrains (topographie), la densité de l'air, la vitesse du vent, ce genre de choses. L'idée de base, c'était de pouvoir afficher tout ça de manière interactive sur une carte dynamique.
-Côté technique, on est reparti sur les mêmes fondations que pour BDD Turbine (Next.js, React, TypeScript, Prisma pour parler à la base de données PostgreSQL). Mais il y avait des nouveautés, spécifiques au monde de la géo : j'ai dû intégrer la bibliothèque Leaflet pour afficher la carte et permettre aux utilisateurs d'interagir avec, et GeoServer, un serveur open-source spécialisé pour gérer et diffuser les différentes couches de données géographiques.
-Pourquoi créer Atlas ? En fait, elle venait remplacer une ancienne application qui existait déjà. Celle-ci avait été faite par une personne moins expérimentée et, pour le dire gentiment, c'était un peu le fouillis : code qualifié de "brouillon", des lenteurs qui gênaient les utilisateurs, et une structure qui rendait la maintenance ou la moindre évolution très compliquée. Le but d'Atlas, c'était donc clair : repartir sur des bases techniques saines, performantes et plus faciles à gérer.
-Dans ce qui suit, je vais donc vous raconter les différentes étapes de ce projet Atlas, un parcours assez similaire à celui de BDD Turbine (comment je suis rentré dedans, le contact avec le client, la conception, le développement, la mise en production...), mais je vais aussi prendre un moment pour expliquer pourquoi j'ai choisi d'utiliser Leaflet et GeoServer spécifiquement.
+          Après l'aventure BDD Turbine, ma deuxième grosse mission pendant mon alternance chez Valeco (qui a démarré en septembre 2023)​, ça a été le développement d'une application baptisée Atlas. Valeco, toujours à fond dans les énergies renouvelables en France, a un Bureau d'Études (le BE) qui manipule toutes sortes de données​.
+        </p>
+        <p>
+          Pour ce projet Atlas, le besoin venait très spécifiquement de l'équipe qui s'occupe de cartographie au sein de ce BE. Atlas, c'est une application web que j'ai développée pour visualiser des données géographiques cruciales pour Valeco : le relief des terrains (topographie), la densité de l'air, la vitesse du vent, ce genre de choses. L'idée de base, c'était de pouvoir afficher tout ça de manière interactive sur une carte dynamique.
+        </p>
+        <p>
+          Côté technique, on est reparti sur les mêmes fondations que pour BDD Turbine (Next.js, React, TypeScript, Prisma pour parler à la base de données PostgreSQL). Mais il y avait des nouveautés, spécifiques au monde de la géo : j'ai dû intégrer la bibliothèque Leaflet pour afficher la carte et permettre aux utilisateurs d'interagir avec, et GeoServer, un serveur open-source spécialisé pour gérer et diffuser les différentes couches de données géographiques.
+        </p>
+        <p>
+          Pourquoi créer Atlas ? En fait, elle venait remplacer une ancienne application qui existait déjà. Celle-ci avait été faite par une personne moins expérimentée et, pour le dire gentiment, c'était un peu le fouillis : code qualifié de "brouillon", des lenteurs qui gênaient les utilisateurs, et une structure qui rendait la maintenance ou la moindre évolution très compliquée.
+        </p>
+        <p>
+          Le but d'Atlas, c'était donc clair : repartir sur des bases techniques saines, performantes et plus faciles à gérer. Dans ce qui suit, je vais donc vous raconter les différentes étapes de ce projet Atlas, un parcours assez similaire à celui de BDD Turbine (comment je suis rentré dedans, le contact avec le client, la conception, le développement, la mise en production...), mais je vais aussi prendre un moment pour expliquer pourquoi j'ai choisi d'utiliser Leaflet et GeoServer spécifiquement.
         </p>
       </section>
 
@@ -114,48 +121,50 @@ Dans ce qui suit, je vais donc vous raconter les différentes étapes de ce proj
         </p>
         <ul className={styles.list}>
           <li>Une super carte interactive : Le cœur du projet, c'était d'offrir une interface cartographique qui soit à la fois performante et facile à prendre en main . Elle devait permettre de visualiser toutes sortes de données géospatiales importantes : densité de l'air, vitesse du vent, topographie (avec la possibilité de superposer différentes couches), mais aussi l'emplacement des éoliennes en France (en faisant la différence entre celles de Valeco et les autres), et même des infos pratiques comme pouvoir calculer des distances.</li>
-          <li>Intégrer les données proprement : L'application devait être capable d'afficher toutes ces couches d'informations de manière fluide, en allant chercher les données nécessaires (fonds de carte, infos géo) directement dans GeoServer via son API. Et bien sûr, il fallait que l'utilisateur puisse naviguer sur la carte (zoomer, se déplacer) sans que ça rame .</li>
+          <li>Intégrer les données proprement : L'application devait être capable d'afficher toutes ces couches d'informations de manière fluide, en allant chercher les données nécessaires (fonds de carte, infos géo) directement dans GeoServer via son API​. Et bien sûr, il fallait que l'utilisateur puisse naviguer sur la carte (zoomer, se déplacer) sans que ça rame​.</li>
           <li>Moderniser et fluidifier : Comme on remplaçait une vieille application, un but essentiel était d'offrir une expérience beaucoup plus fluide et moderne. La qualité du code et sa maintenabilité étaient importantes, évidemment, mais l'accent était vraiment mis sur le ressenti de l'utilisateur : il fallait que ce soit rapide et agréable à utiliser.</li>
         </ul>
         <h3 className={styles.subSectionTitle}>2.2 – Mes Objectifs Personnels / Humains</h3>
         <p>
           Ce deuxième projet chez Valeco, c'était aussi une étape clé pour moi :
         </p>
-        <ul className={styles.list}>
-          <li>Apprendre les outils géo : Un de mes gros objectifs perso, c'était de plonger dans le monde du géospatial, un domaine que je ne connaissais pas du tout. Je voulais vraiment découvrir et apprendre à utiliser les outils spécifiques comme Leaflet et GeoServer. Comprendre les enjeux liés à la manipulation de ces données, c'était passionnant, tout en continuant bien sûr à renforcer mes bases sur la stack web habituelle (Next.js, React...).</li>
-          <li>Prendre plus de responsabilités : Ce projet m'a donné l'opportunité de faire des choix d'architecture technique importants (autour de Leaflet et GeoServer) et, surtout, d'apprendre à les justifier et à les défendre. Gérer les spécificités d'un projet de refonte d'une application existante et continuer à affiner ma gestion de projet en autonomie, y compris le contact direct avec le client, c'était aussi un point important pour moi.</li>
-        </ul>
+        <p>
+          Apprendre les outils géo : Un de mes gros objectifs perso​, c'était de plonger dans le monde du géospatial, un domaine que je ne connaissais pas du tout​. Je voulais vraiment découvrir et apprendre à utiliser les outils spécifiques comme Leaflet et GeoServer. Comprendre les enjeux liés à la manipulation de ces données, c'était passionnant, tout en continuant bien sûr à renforcer mes bases sur la stack web habituelle (Next.js, React...).
+        </p>
+        <p>
+          Prendre plus de responsabilités : Ce projet m'a donné l'opportunité de faire des choix d'architecture technique importants (autour de Leaflet et GeoServer) et, surtout, d'apprendre à les justifier et à les défendre. Gérer les spécificités d'un projet de refonte d'une application existante et continuer à affiner ma gestion de projet en autonomie, y compris le contact direct avec le client, c'était aussi un point important pour moi.
+        </p>
       </section>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>3 – CONTEXTE HUMAIN : LES ACTEURS DU PROJET</h2>
         <p>
-          Pour Atlas, l'organisation humaine était assez similaire à celle de BDD Turbine. Mon travail était toujours destiné au Bureau d'Études, mais cette fois plus spécifiquement à leur équipe cartographique. Et je restais sous la supervision technique de mon Tech Lead au service IT. Encore une fois, j'étais le seul développeur en charge de la réalisation.
+          Pour Atlas, l'organisation humaine était assez similaire à celle de BDD Turbine. Mon travail était toujours destiné au Bureau d​'Études, mais cette fois plus spécifiquement à leur équipe cartographique. Et je restais sous la supervision technique de mon Tech Lead au service IT​. Encore une fois, j'étais le seul développeur en charge de la réalisation.
         </p>
         <p>
           Mon interlocuteur principal côté "client" était une personne assez particulière : c'était celui qui avait développé (un peu en amateur, d'après ce que j'ai compris) la première version d'Atlas, et qui était depuis devenu le référent sur les sujets carto au BE. C'est donc lui qui m'a transmis les besoins fonctionnels et avec qui j'échangeais le plus pour les démos et les retours. Mon Tech Lead, lui, a gardé son rôle de support technique, de validation des grandes orientations que je prenais, et de tuteur si j'avais besoin d'un coup de pouce .
         </p>
         <p>
-          Nos interactions fonctionnaient sur le même modèle : des points réguliers (toutes les semaines ou toutes les deux semaines) avec mon référent client pour affiner les besoins, lui montrer où j'en étais, et valider les développements. On utilisait toujours Teams pour les discussions rapides et Notion pour centraliser la documentation. Petite différence notable : j'ai aussi eu l'occasion de présenter l'avancement d'Atlas à l'équipe complète du Bureau d'Études lors de quelques démonstrations.
+          Nos interactions fonctionnaient sur le même modèle : des points réguliers (toutes les semaines ou toutes les deux semaines) avec mon référent client pour affiner les besoins, lui montrer où j'en étais, et valider les développements​. On utilisait toujours Teams pour les discussions rapides et Notion pour centraliser la documentation. Petite différence notable : j'ai aussi eu l'occasion de présenter l'avancement d'Atlas à l​'équipe complète du Bureau d'Études lors de quelques démonstrations​.
         </p>
       </section>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>4 – CONTEXTE TECHNIQUE : LA BOÎTE À OUTILS D'ATLAS</h2>
         <p>
-          Pour la base technique d'Atlas, on n'a pas tout changé par rapport à BDD Turbine : l'application web a été développée en Next.js avec React et TypeScript. On a utilisé Prisma comme ORM pour communiquer avec la base de données PostgreSQL. L'application principale tournait sur un serveur interne chez Valeco. Notion nous a servi pour toute la documentation du projet, et la bibliothèque Material UI pour pas mal de composants d'interface.
+          Pour la base technique d'Atlas, on n'a pas tout changé par rapport à BDD Turbine : l'application web a été développée en Next.js avec React et TypeScript. On a utilisé Prisma comme ORM pour communiquer avec la base de données PostgreSQL​. L'application principale tournait sur un serveur interne chez Valeco. Notion nous a servi pour toute la documentation du projet, et la bibliothèque Material UI pour pas mal de composants d'interface.
         </p>
         <p>
           Là où c'était nouveau, c'était pour la partie cartographique :
         </p>
         <p>
-          Leaflet a été choisi pour afficher la carte et gérer les interactions (clics, survols, etc.). Ça permettait d'afficher simplement les fonds de carte, les points d'intérêt, et j'ai aussi utilisé un plugin pour regrouper les points (le "clustering") afin que la carte reste lisible même avec beaucoup de données.
+          Leaflet a été choisi pour afficher la carte et gérer les interactions (clics, survols, etc.). Ça permettait d'afficher simplement les fonds de carte, les points d'intérêt, et j'ai aussi utilisé un plugin pour regrouper les points (le "clustering"​) afin que la carte reste lisible même avec beaucoup de données.
         </p>
         <p>
-          Pour fournir les données géospatiales à Leaflet, on s'est appuyé sur GeoServer. C'est lui qui hébergeait et diffusait les différentes couches de données dont l'application avait besoin, via son API et des formats standards comme WMS et WFS. Point intéressant : c'est moi qui me suis occupé de A à Z du déploiement de GeoServer sur un serveur dédié (un VPS), de sa configuration initiale, et de rédiger sa documentation technique. J'ai même fait une petite session de partage de connaissances avec l'équipe IT de Valeco pour leur expliquer son fonctionnement et son administration.
+          Pour fournir les données géospatiales à Leaflet, on s'est appuyé sur GeoServer​. C'est lui qui hébergeait et diffusait les différentes couches de données dont l'application avait besoin, via son API et des formats standards comme WMS et WFS. Point intéressant : c'est moi qui me suis occupé de A à Z du déploiement de GeoServer sur un serveur dédié (un VPS​), de sa configuration initiale, et de rédiger sa documentation technique. J'ai même fait une petite session de partage de connaissances avec l'équipe IT de Valeco pour leur expliquer son fonctionnement et son administration.
         </p>
         <p>
-          Et bien sûr, tout le code source était versionné avec Git sur Microsoft Azure DevOps.
+          Et bien sûr, tout le code source était versionné avec Git sur Microsoft Azure DevOps​.
         </p>
       </section>
 
@@ -166,20 +175,23 @@ Dans ce qui suit, je vais donc vous raconter les différentes étapes de ce proj
           Moderniser l'outil cartographique avec Atlas, ça représentait plusieurs enjeux pour Valeco :
         </p>
         <p>
-          Le premier, c'était de gagner nettement en performance et en fiabilité pour toutes les analyses cartographiques faites en interne . L'objectif direct était d'améliorer la productivité de l'équipe spécialisée du BE carto.
+          Le premier, c'était de gagner nettement en performance et en fiabilité pour toutes les analyses cartographiques faites en interne . L'objectif direct était d'améliorer la productivité de l'équipe spécialisée du BE carto​.
         </p>
         <p>
-          Au-delà de l'efficacité pure, l'idée était aussi de doter Valeco d'un outil pérenne, facile à maintenir et prêt pour d'éventuelles évolutions futures, le tout basé sur une fondation technique moderne et solide.
+          Au-delà de l'efficacité pure, l'idée était aussi de doter Valeco d'un outil pérenne, facile à maintenir et prêt pour d'éventuelles évolutions futures​, le tout basé sur une fondation technique moderne et solide.
         </p>
         <p>
-          Enfin, ce projet visait aussi à améliorer l'expérience des utilisateurs, à mieux valoriser le patrimoine de données géospatiales de l'entreprise et à rendre plus simple le partage de ces informations en interne.
+          Enfin, ce projet visait aussi à améliorer l'expérience des utilisateurs​, à mieux valoriser le patrimoine de données géospatiales de l'entreprise et à rendre plus simple le partage de ces informations en interne​.
         </p>
-        <h3 className={styles.subSectionTitle}>5.2 – Les Risques : Les défis qu'on avait identifiés</h3>
+        <h3 className={styles.subSectionTitle}>5.2 – Les Risques : Les points sensibles qu'on avait en tête</h3>
         <p>
-          Le principal défi technique qu'on avait repéré pour ce projet, c'était Ia maîtrise de GeoServer . La plus grosse difficulté anticipée, c'était d'arriver à comprendre assez finement son fonctionnement pour pouvoir configurer et exposer les données via son API de manière parfaitement exacte, pour que ça colle pile aux besoins d'analyse de l'équipe carto.
+          Tout projet a ses défis​, et on avait identifié deux points principaux qui demandaient une certaine vigilance :
         </p>
         <p>
-          La courbe d'apprentissage de GeoServer, qui est connue pour être assez raide (on entend parfois dire que c'est "un enfer" !) , était aussi un point de vigilance. Ça aurait pu impacter les délais du projet. Heureusement, en comparaison, Leaflet s'est avéré beaucoup plus simple à prendre en main. Concernant l'infrastructure de GeoServer, même si j'ai géré son déploiement initial sur un VPS, le risque lié à sa gestion au quotidien était limité, car la supervision et la maintenance courante ont ensuite été reprises par mon Tech Lead .
+          La migration des données : Ça, on savait que ce serait délicat​. Transformer les données d'un vieil Excel, avec son vécu, pour les faire coller parfaitement à une nouvelle base de données bien propre, ce n'est jamais évident. Le risque principal, c'était de perdre de l'info ou de mal l'interpréter en cours de route, surtout si les données de départ manquaient un peu de rigueur. Ça demandait une approche très méthodique, et pas mal de contrôles.
+        </p>
+        <p>
+          Ma propre courbe d'apprentissage : L'autre point me concernait plus personnellement. Je découvrais une partie de cet environnement technique en arrivant. Apprendre et développer en même temps, ça met quand même une certaine pression : on veut bien faire, on se demande si le code sera de qualité, s'il sera facile à maintenir... Heureusement, j'ai eu la chance que Valeco comprenne ça et me donne le temps nécessaire. Ça m​'a permis de souffler un peu, de bien assimiler les choses et de consacrer du temps à la fin pour une bonne phase de refactoring. C'était essentiel pour moi de livrer une application solide et dont je pouvais être fier.
         </p>
       </section>
 
@@ -198,11 +210,11 @@ Dans ce qui suit, je vais donc vous raconter les différentes étapes de ce proj
         </p>
          <h3 className={styles.subSectionTitle}>6.3 – Préparation de l'Infrastructure GeoServer</h3>
         <p>
-          Mettre en place GeoServer a été une étape clé. J'ai commencé par l'installer et le configurer sur un serveur de test (un VPS Ubuntu). Ça m'a permis de bien documenter tout le processus avant de le refaire proprement sur le serveur définitif de Valeco . L'ajout des différentes couches de données s'est fait un peu plus tard dans le projet, et leur donner le bon style directement dans GeoServer a présenté une certaine complexité technique.
+          Mettre en place GeoServer a été une étape clé. J'ai commencé par l'installer et le configurer sur un serveur de test (un VPS Ubuntu). Ça m​'a permis de bien documenter tout le processus avant de le refaire proprement sur le serveur définitif de Valeco​. L'ajout des différentes couches de données s'est fait un peu plus tard dans le projet, et leur donner le bon style directement dans GeoServer a présenté une certaine complexité technique.
         </p>
          <h3 className={styles.subSectionTitle}>6.4 – Développement de l'Application Atlas</h3>
          <p>
-          Le développement de l'application Atlas elle-même a débuté par l'intégration de la partie carte avec Leaflet. Ensuite, j'ai avancé module par module, en développant les différents panneaux d'information et les fonctionnalités associées, en les connectant à l'API de GeoServer et à la base de données via Prisma .
+          Le développement de l'application Atlas elle-même a débuté par l'intégration de la partie carte avec Leaflet. Ensuite, j'ai avancé module par module, en développant les différents panneaux d'information et les fonctionnalités associées, en les connectant à l'API de GeoServer et à la base de données via Prisma​.
         </p>
          <h3 className={styles.subSectionTitle}>6.5 – Tests, Validation et Reprise</h3>
          <p>
@@ -210,7 +222,7 @@ Dans ce qui suit, je vais donc vous raconter les différentes étapes de ce proj
         </p>
          <h3 className={styles.subSectionTitle}>6.6 – Déploiement et Transfert de Connaissances</h3>
         <p>
-          La mise en production sur l'infrastructure interne a été gérée par mon Tech Lead. Pour le passage de relais, Ia documentation que j'avais rédigée (notamment sur l'installation et la configuration de GeoServer) a été transmise à mon référent au BE, qui s'est chargé ensuite de la partager avec ses équipes .
+          La mise en production sur l'infrastructure interne a été gérée par mon Tech Lead. Pour le passage de relais, Ia documentation que j'avais rédigée (notamment sur l'installation et la configuration de GeoServer) a été transmise à mon référent au BE, qui s'est chargé ensuite de la partager avec ses équipes​.
         </p>
       </section>
 
@@ -220,7 +232,7 @@ Dans ce qui suit, je vais donc vous raconter les différentes étapes de ce proj
           Quand mon intervention sur le projet s'est terminée, l'application Atlas était non seulement déployée en production, mais déjà activement utilisée par l'équipe cartographique du Bureau d'Études. Les retours qu'on a eus étaient excellents, ce qui confirmait que la solution déveIoppée répondait bien à leurs attentes . Comme c'était prévu, c'est le Bureau d'Études qui a pris directement la main sur la maintenance et les éventuelles évolutions futures dès la mise en production.
         </p>
         <p>
-          Le projet ayant parfaitement rempli ses objectifs initiaux, il n'y avait pas d'évolutions majeures planifiées juste après le lancement, hormis quelques ajustements mineurs. En interne, l'outil est perçu comme apportant un gain de temps considérable sur les tâches de consultation et d'analyse de données cartographiques, surtout pour des activités clés comme la prospection de terrains. Il a donc bien consolidé sa place comme outil de référence pour l'équipe .
+          Le projet ayant parfaitement rempli ses objectifs initiaux, il n'y avait pas d'évolutions majeures planifiées juste après le lancement​, hormis quelques ajustements mineurs. En interne, l'outil est perçu comme apportant un gain de temps considérable sur les tâches de consultation et d'analyse de données cartographiques, surtout pour des activités clés comme la prospection de terrains​. Il a donc bien consolidé sa place comme outil de référence pour l'équipe​.
         </p>
       </section>
 

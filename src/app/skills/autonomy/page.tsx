@@ -13,10 +13,10 @@ export default function AutonomySkillPage() {
           L'autonomie est une compétence extrêmement cruciale dans le domaine du développement, car nous sommes confrontés quotidiennement à des imprévus, que ce soit en cours de développement, dans la gestion de projet ou dans l'échange avec les clients. En entreprise, c'est également un atout précieux qui permet d'avancer efficacement sans mobiliser inutilement ses collègues.
         </p>
         <p>
-          Être autonome, c'est être capable de faire face à des situations complexes sans attendre constamment de l'aide. C'est une compétence qui renforce la fluidité des projets, réduit les blocages et permet d'apporter des solutions concrètes avec réactivité.
+          Être autonome​, c'est être capable de faire face à des situations complexes sans attendre constamment de l'aide. C'est une compétence qui renforce la fluidité des projets​, réduit les blocages et permet d'apporter des solutions concrètes avec réactivité​.
         </p>
         <p>
-          Une personne autonome est quelqu'un sur qui l'on peut compter, capable de s'adapter rapidement à de nouveaux projets et qui devient naturellement un point d'appui pour les autres. Pour moi, l'autonomie est une condition à l'efficacité.
+          Une personne autonome est quelqu'un sur qui l​'on peut compter, capable de s'adapter rapidement à de nouveaux projets et qui devient naturellement un point d'appui pour les autres​. Pour moi, l'autonomie est une condition à l'efficacité​.
         </p>
       </section>
 
@@ -39,23 +39,23 @@ export default function AutonomySkillPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mon autocritique</h2>
         <p>
-          Je considère aujourd'hui avoir un niveau confirmé en matière d'autonomie. J'ai la capacité de résoudre rapidement des problèmes, de m'adapter à de nouvelles demandes ou technologies, et de rester efficace sans avoir besoin d'un accompagnement constant.
+          Je considère aujourd'hui avoir un niveau confirmé en matière d'autonomie. J​'ai la capacité de résoudre rapidement des problèmes, de m'adapter à de nouvelles demandes ou technologies, et de rester efficace sans avoir besoin d'un accompagnement constant​.
         </p>
         <p>
-          Cependant, j'ai aussi appris que l'autonomie en équipe n'est pas la même chose que l'autonomie en solitaire. Lors de mon tout premier projet en équipe, j'ai parfois pris des initiatives sans assez prendre en compte ces dynamiques collectives. J'ai donc compris qu'il fallait trouver un équilibre : savoir avancer seul, mais aussi savoir s'aligner avec les autres pour que l'équipe reste cohérente et efficace.
+          Cependant, j​'ai aussi appris que l'autonomie en équipe n'est pas la même chose que l'autonomie en solitaire. Lors de mon tout premier projet en équipe, j'ai parfois pris des initiatives sans assez prendre en compte ces dynamiques collectives. J'ai donc compris qu'il fallait trouver un équilibre : savoir avancer seul​, mais aussi savoir s'aligner avec les autres pour que l'équipe reste cohérente et efficace​.
         </p>
         <p>
-          L'autonomie est donc une compétence qui se travaille en lien avec l'environnement. Elle ne se résume pas à savoir tout faire seul, mais plutôt à savoir quand agir par soi-même, et quand consulter les autres.
+          L'autonomie est donc une compétence qui se travaille en lien avec l'environnement. Elle ne se résume pas à savoir tout faire seul, mais plutôt à savoir quand agir par soi-même, et quand consulter les autres​.
         </p>
       </section>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mon évolution dans cette compétence</h2>
         <p>
-          Dans le cadre de mon projet professionnel, où j'ambitionne de devenir tech lead, l'autonomie sera une compétence fondamentale. Mes collègues devront pouvoir compter sur moi pour les guider, les débloquer, ou trouver rapidement des solutions aux problèmes qu'ils rencontrent. Cela demande à la fois des connaissances solides, mais aussi une capacité à travailler en autonomie pour absorber rapidement de nouvelles informations.
+          Dans le cadre de mon projet professionnel, où j'ambitionne de devenir tech lead, l​'autonomie sera une compétence fondamentale​. Mes collègues devront pouvoir compter sur moi pour les guider, les débloquer, ou trouver rapidement des solutions aux problèmes qu'ils rencontrent. Cela demande à la fois des connaissances solides, mais aussi une capacité à travailler en autonomie pour absorber rapidement de nouvelles informations​.
         </p>
         <p>
-          Aujourd'hui, je continue de progresser dans cette compétence en demandant régulièrement des retours sur mon travail, en les analysant, et en cherchant toujours à m'améliorer. Être en perpétuelle remise en question, c'est selon moi le meilleur moyen de devenir encore plus autonome.
+          Aujourd'hui, je continue de progresser dans cette compétence en demandant régulièrement des retours sur mon travail, en les analysant​, et en cherchant toujours à m'améliorer​. Être en perpétuelle remise en question, c'est selon moi le meilleur moyen de devenir encore plus autonome.
         </p>
         <p>
           Je n'ai pas d'objectif figé sur ce point, mais je m'efforce simplement d'apprendre chaque jour, de façon régulière et continue, pour gagner en confiance et en maîtrise.

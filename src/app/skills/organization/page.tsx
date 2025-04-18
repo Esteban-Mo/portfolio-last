@@ -33,10 +33,10 @@ export default function OrganizationSkillPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mon autocritique</h2>
         <p>
-          Aujourd'hui, je considère que j'ai une organisation simple et efficace. Je sais m'adapter aux outils ou aux besoins de l'entreprise, et je suis capable de faire évoluer mes méthodes en fonction du contexte du projet.
+          Aujourd'hui​, je considère que j'ai une organisation simple et efficace. Je sais m'adapter aux outils ou aux besoins de l'entreprise, et je suis capable de faire évoluer mes méthodes en fonction du contexte du projet​.
         </p>
         <p>
-          Un axe d'amélioration que j'identifie, c'est ma capacité à rendre mon organisation plus facilement partageable, notamment si un collègue devait intégrer un projet en cours. Aujourd'hui, certaines de mes habitudes sont très personnelles, et pourraient être difficiles à suivre pour quelqu'un d'autre sans explication. Mon objectif est donc de structurer mon organisation de manière plus collaborative, sans pour autant la complexifier inutilement.
+          Un axe d'amélioration que j​'identifie, c'est ma capacité à rendre mon organisation plus facilement partageable, notamment si un collègue devait intégrer un projet en cours​. Aujourd'hui, certaines de mes habitudes sont très personnelles, et pourraient être difficiles à suivre pour quelqu'un d'autre sans explication. Mon objectif est donc de structurer mon organisation de manière plus collaborative, sans pour autant la complexifier inutilement.
         </p>
         <p>
           Globalement, l'organisation a toujours été quelque chose d'assez naturel pour moi, mais que j'ai clairement affiné et renforcé avec l'expérience. C'est avec les erreurs qu'on apprend à bien s'organiser.
@@ -46,13 +46,13 @@ export default function OrganizationSkillPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mon évolution dans cette compétence</h2>
         <p>
-          Aujourd'hui, je considère que j'ai une organisation simple et efficace. Je sais m'adapter aux outils ou aux besoins de l'entreprise, et je suis capable de faire évoluer mes méthodes en fonction du contexte du projet.
+          Aujourd'hui, je considère que j'ai une organisation simple et efficace. Je sais m'adapter aux outils ou aux besoins de l'entreprise, et je suis capable de faire évoluer mes méthodes en fonction du contexte du projet​.
         </p>
         <p>
-          Un axe d'amélioration que j'identifie, c'est ma capacité à rendre mon organisation plus facilement partageable, notamment si un collègue devait intégrer un projet en cours. Aujourd'hui, certaines de mes habitudes sont très personnelles, et pourraient être difficiles à suivre pour quelqu'un d'autre sans explication. Mon objectif est donc de structurer mon organisation de manière plus collaborative, sans pour autant la complexifier inutilement.
+          Un axe d'amélioration que j​'identifie, c'est ma capacité à rendre mon organisation plus facilement partageable, notamment si un collègue devait intégrer un projet en cours. Aujourd'hui, certaines de mes habitudes sont très personnelles, et pourraient être difficiles à suivre pour quelqu'un d'autre sans explication​. Mon objectif est donc de structurer mon organisation de manière plus collaborative, sans pour autant la complexifier inutilement.
         </p>
         <p>
-          Globalement, l'organisation a toujours été quelque chose d'assez naturel pour moi, mais que j'ai clairement affiné et renforcé avec l'expérience. C'est avec les erreurs qu'on apprend à bien s'organiser.
+          Globalement​, l'organisation a toujours été quelque chose d'assez naturel pour moi, mais que j'ai clairement affiné et renforcé avec l'expérience. C'est avec les erreurs qu'on apprend à bien s'organiser​.
         </p>
       </section>
     </div>

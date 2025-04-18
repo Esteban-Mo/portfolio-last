@@ -116,18 +116,18 @@ export default function ModuleFoncierPage() {
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>2 – OBJECTIFS : CE QU'ON VISait (LE PROJET ET MOI)</h2>
+        <h2 className={styles.sectionTitle}>2 – OBJECTIFS</h2>
         <p>
-          En arrivant sur le projet Act qui était déjà sur les rails, mes objectifs personnels se sont naturellement alignés avec les ambitions globales du projet et cette nouvelle façon de travailler en équipe.
+          En arrivant sur le projet Act qui était déjà sur les rails, mes objectifs personnels se sont naturellement alignés avec les ambitions globales du projet et cette nouvelle façon de travailler en équipe​.
         </p>
         <h3 className={styles.subSectionTitle}>2.1 – Les Objectifs Techniques (du Projet Act lui-même)</h3>
         <p>
-          Collectivement, avec l'équipe, on visait plusieurs buts techniques majeurs :
+          Collectivement, avec l​'équipe​, on visait plusieurs buts techniques majeurs :
         </p>
         <ul className={styles.list}>
           <li>Moderniser et centraliser la gestion foncière : L'objectif numéro un, c'était de remplacer l'ancien outil par une application moderne, capable de centraliser efficacement toutes les informations importantes : les terrains, les contacts liés, les actes juridiques, etc.</li>
-          <li>Permettre l'évolution fonctionnelle : Il y avait une forte attente pour que cette nouvelle appli permette enfin d'ajouter des fonctionnalités cruciales que les utilisateurs réclamaient, comme des systèmes pour mieux prioriser leurs tâches, des notifications intégrées, et potentiellement plein d'autres améliorations à venir.</li>
-          <li>Améliorer les perfs et la maintenance : On cherchait aussi à ce que la nouvelle appli soit nettement plus rapide que l'ancienne, et à construire une architecture logicielle propre, modulaire, qui soit facile à maintenir sur le long terme. (Petit bémol à noter : faute de temps sur l'ensemble du projet, l'équipe n'a pas eu la possibilité de prioriser la mise en place de tests unitaires.)</li>
+          <li>Permettre l​'évolution fonctionnelle : Il y avait une forte attente pour que cette nouvelle appli permette enfin d'ajouter des fonctionnalités cruciales que les utilisateurs réclamaient​, comme des systèmes pour mieux prioriser leurs tâches, des notifications intégrées, et potentiellement plein d'autres améliorations à venir​.</li>
+          <li>Améliorer les perfs et la maintenance : On cherchait aussi à ce que la nouvelle appli soit nettement plus rapide que l'ancienne, et à construire une architecture logicielle propre, modulaire​, qui soit facile à maintenir sur le long terme​. (Petit bémol à noter : faute de temps sur l'ensemble du projet, l'équipe n'a pas eu la possibilité de prioriser la mise en place de tests unitaires​.)</li>
         </ul>
         <h3 className={styles.subSectionTitle}>2.2 – Mes Objectifs Personnels / Humains (en rejoignant l'équipe)</h3>
         <p>
@@ -143,34 +143,34 @@ export default function ModuleFoncierPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>3 – CONTEXTE HUMAIN : L'ÉQUIPE ACT EN MODE AGILE</h2>
         <p>
-          En arrivant sur Act, j'ai donc intégré une équipe dédiée de cinq personnes, qui fonctionnait selon une méthode Agile. L'équipe était composée de trois développeurs Fullstack (dont moi), d'un Product Owner (PO) et de mon Tech Lead, qui jouait aussi le rôle de Scrum Master pour faciliter le processus Agile. Pour rappel, le Product Owner est celui qui, dans l'équipe, représente la voix des utilisateurs, définit et priorise ce qu'il faut développer (souvent sous forme de "User Stories"), et cherche à maximiser la valeur de ce qu'on produit.
+          En arrivant sur Act​, j'ai donc intégré une équipe dédiée de cinq personnes, qui fonctionnait selon une méthode Agile. L'équipe était composée de trois développeurs Fullstack (dont moi​), d'un Product Owner (PO) et de mon Tech Lead, qui jouait aussi le rôle de Scrum Master pour faciliter le processus Agile. Pour rappel​, le Product Owner est celui qui, dans l'équipe, représente la voix des utilisateurs, définit et priorise ce qu'il faut développer (souvent sous forme de "User Stories"), et cherche à maximiser la valeur de ce qu'on produit​.
         </p>
         <p>
-          Au quotidien, ma collaboration se faisait vraiment avec toute l'équipe. Le PO était un interlocuteur privilégié, présent à toutes les réunions, et c'est vers lui qu'on se tournait pour toute question sur une User Story ou un détail fonctionnel. Les grosses décisions techniques restaient du ressοrt du Tech Lead, mais il nous consultait systématiquement pour avoir nos avis de développeurs.
+          Au quotidien, ma collaboration se faisait vraiment avec toute l'équipe​. Le PO était un interlocuteur privilégié, présent à toutes les réunions, et c'est vers lui qu'on se tournait pour toute question sur une User Story ou un détail fonctionnel. Les grosses décisions techniques restaient du ressοrt du Tech Lead, mais il nous consultait systématiquement pour avoir nos avis de développeurs.
         </p>
         <p>
-          Notre rythme de travail était ponctué par les cérémonies Agiles classiques : les "daily stand-ups" chaque matin pour se synchroniser rapidement, les "sprint planning" pour définir le travail des deux semaines à venir, les revues de sprint (où on faisait des démos) pour montrer nos avancées, et les rétrospectives pour réfléchir ensemble à comment améliorer notre fonctionnement.
+          Notre rythme de travail était ponctué par les cérémonies Agiles classiques : les "​daily stand-ups" chaque matin pour se synchroniser rapidement, les "sprint planning" pour définir le travail des deux semaines à venir, les revues de sprint (où on faisait des démos) pour montrer nos avancées, et les rétrospectives pour réfléchir ensemble à comment améliorer notre fonctionnement​.
         </p>
         <p>
-          La communication directe avec les utilisateurs finaux du Bureau d'Études passait principalement par notre PO, qui faisait l'interface. Par contre, lors des démonstrations de fin de sprint, toute l'équipe était présente et chacun de nous avait l'occasion de présenter les fonctionnalités sur lesquelles il avait personnellement travaillé .
+          La communication directe avec les utilisateurs finaux du Bureau d'Études passait principalement par notre PO, qui faisait l'interface. Par contre, lors des démonstrations de fin de sprint, toute l'équipe était présente et chacun de nous avait l'occasion de présenter les fonctionnalités sur lesquelles il avait personnellement travaillé​.
         </p>
       </section>
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>4 – CONTEXTE TECHNIQUE : LES OUTILS DE L'ÉQUIPE ACT</h2>
         <p>
-          L'application Act repose sur le socle technique standard de Valecο : Next.js avec React et TypeScript pour le développement front et back, l'ORM Prisma et une base de données PοstgreSQL hébergée en interne. La bibliothèque Material UI était utilisée pour les cοmpοsants d'interface. En arrivant sur le projet, j'ai dû m'adapter à une structure de dossiers et de fichiers spécifique que l'équipe avait déjà mise en place, mais ça s'est fait assez naturellement .
+          L'application Act repose sur le socle technique standard de Valecο : Next.js avec React et TypeScript pour le développement front et back, l'ORM Prisma et une base de données PοstgreSQL hébergée en interne​. La bibliothèque Material UI était utilisée pour les cοmpοsants d'interface​. En arrivant sur le projet, j'ai dû m'adapter à une structure de dossiers et de fichiers spécifique que l'équipe avait déjà mise en place, mais ça s'est fait assez naturellement​.
         </p>
         <p>
-          Un changement notable par rapport aux outils que j'utilisais avant, c'a été l'adoption de GitHub comme plateforme centrale. GitHub servait non seulement pour le versioning du code (en remplacement d'Azure DevOps), mais aussi pour toute la gestion de projet Agile (le suivi des User Stories, la planification des sprints, etc., sans doute via GitHub Projects ou Issues). Pour la collaboration et la conception, l'équipe utilisait Micrοsοft Teams pour communiquer, Figma pour faire les maquettes d'interface, et Draw.io pour modéliser les données (MCD/MLD). Nοtiοn restait l'outil de référence pour la documentation plus détaillée .
+          Un changement notable par rapport aux outils que j​'utilisais avant, c'a été l'adoption de GitHub comme plateforme centrale. GitHub servait non seulement pour le versioning du code (en remplacement d'Azure DevOps), mais aussi pour toute la gestion de projet Agile (le suivi des User Stories, la planification des sprints, etc., sans doute via GitHub Projects ou Issues). Pour la collaboration et la conception, l'équipe utilisait Micrοsοft Teams pour communiquer, Figma pour faire les maquettes d'interface, et Draw.io pour modéliser les données (MCD/MLD). Nοtiοn restait l'outil de référence pour la documentation plus détaillée​.
         </p>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>5 – ENJEUX ET RISQUES : CE QUI MOTIVAIT (ET INQUIÉTAIT UN PEU)</h2>
+        <h2 className={styles.sectionTitle}>5 – ENJEUX ET RISQUES</h2>
         <h3 className={styles.subSectionTitle}>5.1 – Les Enjeux : Pοurquοi Act était important ?</h3>
         <p>
-          Le projet Act revêtait plusieurs enjeux majeurs pour Valeco. Il s'agissait avant tout de garantir la continuité et l'évolutivité de la gestion foncière, un processus vraiment critique pour l'entreprise. Le succès du projet devait aussi montrer la capacité de l'équipe à livrer rapidement un outil moderne et surtout, à enfin débloquer l'implémentation de nouvelles fonctionnalités attendues depuis longtemps par les utilisateurs . Un enjeu clé, d'ailleurs, était de livrer une première version viable en production dans un délai assez court.
+          Le projet Act revêtait plusieurs enjeux majeurs pour Valeco​. Il s'agissait avant tout de garantir la continuité et l'évolutivité de la gestion foncière, un processus vraiment critique pour l'entreprise​. Le succès du projet devait aussi montrer la capacité de l'équipe à livrer rapidement un outil moderne et surtout, à enfin débloquer l'implémentation de nouvelles fonctionnalités attendues depuis longtemps par les utilisateurs . Un enjeu clé, d'ailleurs, était de livrer une première version viable en production dans un délai assez court.
         </p>
         <p>
           Secondairement, ce projet contribuait à l'objectif d'harmoniser les οutils de gestion internes chez Valeco et de fournir aux utilisateurs une application performante au quotidien, notamment en termes de rapidité de recherche et de création de données.
@@ -181,8 +181,8 @@ export default function ModuleFoncierPage() {
         </p>
         <ul className={styles.list}>
           <li>La pression du temps : Le délai très limité avant la mise en prοduction de la première version a engendré une certaine charge de travail pour l'équipe, même si on a réussi à éviter une situation de "rush" ingérable .</li>
-          <li>La migration des données : Même si je n'ai pas participé directement à cette phase, le risque le plus significatif identifié collectivement concernait la migration des données depuis l'ancien système vers la nouvelle base. C'est souvent une opération potentiellement complexe.</li>
-          <li>Les performances sur gros volumes : On a effectivement constaté des ralentissements notables quand on chargeait de très grandes quantités de données (comme la liste des contacts). Face à ça, l'équipe a dû revoir l'approche technique en mettant en place des techniques comme la virtualisation des listes et de la mise en cache pour assurer une navigation fluide pour l'utilisateur final .</li>
+          <li>La migration des données : Même si je n​'ai pas participé directement à cette phase, le risque le plus significatif identifié collectivement concernait la migration des données depuis l'ancien système vers la nouvelle base. C'est souvent une opération potentiellement complexe​.</li>
+          <li>Les performances sur gros volumes : On a effectivement constaté des ralentissements notables quand on chargeait de très grandes quantités de données (comme la liste des contacts​). Face à ça, l​'équipe a dû revoir l'approche technique en mettant en place des techniques comme la virtualisation des listes et de la mise en cache pour assurer une navigation fluide pour l'utilisateur final​.</li>
         </ul>
       </section>
 
@@ -201,7 +201,7 @@ export default function ModuleFoncierPage() {
         </p>
          <h3 className={styles.subSectionTitle}>6.3 – Participation Active au Cycle Agile</h3>
          <p>
-          J'ai pleinement participé à l'ensemble des rituels Agiles de l'équipe. Aux daily stand-ups, je présentais ce que j'avais fait la veille et où j'en étais. Les weekly étaient l'occasion de faire un bilan de la semaine et de montrer nos avancées aux autres équipes IT. Durant les sprint planning, je participais à la sélection et à l'estimation de l'effort des User Stories qu'on allait traiter. En fin de sprint, les rétrospectives permettaient de discuter ensemble de nos méthodes de travail pour nous améliorer. Pour les démos de fin de sprint, après avoir biеn testé mes propres ajouts sur un environnement commun , je préparais une petite "feuille de route" pour présenter mes réalisations de manière claire et fluide .
+          J​'ai pleinement participé à l'ensemble des rituels Agiles de l'équipe. Aux daily stand-ups, je présentais ce que j'avais fait la veille et où j'en étais. Les weekly étaient l'occasion de faire un bilan de la semaine et de montrer nos avancées aux autres équipes IT​. Durant les sprint planning, je participais à la sélection et à l'estimation de l'effort des User Stories qu'on allait traiter. En fin de sprint, les rétrospectives permettaient de discuter ensemble de nos méthodes de travail pour nous améliorer. Pour les démos de fin de sprint, après avoir biеn testé mes propres ajouts sur un environnement commun​, je préparais une petite "feuille de route​" pour présenter mes réalisations de manière claire et fluide​.
         </p>
          <h3 className={styles.subSectionTitle}>6.4 – Adaptation Technique et Collaboration</h3>
          <p>
@@ -220,7 +220,7 @@ export default function ModuleFoncierPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>7 – FIN DU PROJET ET PERSPECTIVES D'AVENIR : ACT CONTINUE SA ROUTE</h2>
         <p>
-          À l'heure actuelle, l'application Act est dans un état stable et déployée en production, mais elle reste en phase d'amélioration continue. Son adoption par les différents services concernés par le foncier chez Valeco est progressive, avec de plus en plus d'utilisateurs qui font la transition depuis l'ancien outil.
+          À l'heure actuelle​, l'application Act est dans un état stable et déployée en production, mais elle reste en phase d'amélioration continue. Son adoption par les différents services concernés par le foncier chez Valeco est progressive​, avec de plus en plus d'utilisateurs qui font la transition depuis l'ancien outil​.
         </p>
         <p>
           L'équipe de développement, dont je fais toujours partie, se concentre en ce moment sur le traitement des retours utilisateurs (corriger des bugs ou faire des modifications mineures) afin de bien consolider ce qui existe déjà. Dans un second temps, la roadmap prévoit l'implémentation de nouvelles fonctionnalités importantes, comme la gestion fine des droits par utilisateur, parmi d'autres évolutions planifiées pour enrichir l'application .
@@ -236,10 +236,10 @@ export default function ModuleFoncierPage() {
           Ma participation au projеt Act a été une expérience particulièremеnt formatrice, notamment grâce à la découvertе et à l'application de la methodologie Agile au quotidien. J'ai énormément apprécié cette manière de procéder: avoir des tâches prédéfinies dans un cadre structuré (les sprints) et une vision claire de la direction du projet ,c'est un vrai plus. Ça m 'a appris à mieux ordonner mon travail pour pouvoir en rendre compte efficacement chaque jour lors des daily stand-ups, et à expliciter clairement mes avancées ou mes éventuels points de blocage.
         </p>
         <p>
-          Au delà de la méthode, j'ai développé de nombreuses compétences liées au travail collaboratif : la communication constante avec l'équipe et le PO , la pratique des revues de code (donner et recevoir du feedback), l'apprentissage de la lecture et de la compréhension du code écrit par d'autres (un exercice très utile  ! ), ainsi que la gestion des "conflits " techniques (comme les merges). J'ai aussi appris l'importance de bien se concentrer sur le périmètre défini par les User Stories ("savoir se restreindre à ce qu'on attend", comme on dit) et j'ai nettement amélioré ma maîtrise de la gestion de projet sur GitHub, notamment via une utilisation rigoureuse des branches pour chaque tâche spécifique .
+          Au delà de la méthode, j'ai développé de nombreuses compétences liées au travail collaboratif : la communication constante avec l'équipe et le PO , la pratique des revues de code (donner et recevoir du feedback), l'apprentissage de la lecture et de la compréhension du code écrit par d'autres (un exercice très utile ! ), ainsi que la gestion des "conflits " techniques (comme les merges). J'ai aussi appris l'importance de bien se concentrer sur le périmètre défini par les User Stories ("savoir se restreindre à ce qu'on attend", comme on dit) et j'ai nettement amélioré ma maîtrise de la gestion de projet sur GitHub, notamment via une utilisation rigoureuse des branches pour chaque tâche spécifique .
         </p>
         <p>
-          Cette expérience contraste fortement avec mes projets précédents menés en autonomie. Le travail en équipe et le cadre Agile apportent une dynamique différente, très stimulante .De plus , le fait que le projet Act soit toujours en cours représente une opportunité précieuse : ça me permet un apprentissage continu sur des fonctionnalités souvent plus avancées que dans un projet à durée déterminée, ce qui constitue un vrai bonus pour mon alternance et ma montée en compétences globale.
+          Cette expérience contraste fortement avec mes projets précédents menés en autonomie​. Le travail en équipe et le cadre Agile apportent une dynamique différente, très stimulante​. De plus​, le fait que le projet Act soit toujours en cours représente une opportunité précieuse : ça me permet un apprentissage continu sur des fonctionnalités souvent plus avancées que dans un projet à durée déterminée​, ce qui constitue un vrai bonus pour mon alternance et ma montée en compétences globale​.
         </p>
       </section>
 

@@ -9,7 +9,7 @@ export default function PresentationPage() {
 
       <section className={styles.section}>
         <p>
-          Curieux et motivé, j'aime me lancer dans des projets techniques et apprendre en avançant. Mes étudies d'ingénieur m'ont donné les bases, mon alternance m'a fait travailler sur Next.js et Prisma, et mes projets perso en Node.js m'ont permis d'essayer des choses. J'ai aussi créé un site pour des vignerons en auto-entrepreneur, et les bons retours m'ont confirmé que ce metier est fait pour moi.
+          Curieux et motivé, j'aime me lancer dans des projets techniques et apprendre en avançant. Mes étudies d'ingénieur m'ont donné les bases, mon alternance m​'a fait travailler sur Next.js et Prisma, et mes projets perso en Node.js m'ont permis d'essayer des choses​. J'ai aussi créé un site pour des vignerons en auto-entrepreneur, et les bons retours m'ont confirmé que ce metier est fait pour moi.
         </p>
         <p>
           En full stack, j'aime tout prendre en charge : discuter avec le client pour comprendre ses besoins, concevoir le projet, coder – souvent avec SQL ou TypeScript – et le déployer. Résoudre des problèmes et améliorer le code, c'est ce qui me plaît. Je me tiens à jour avec de la veille technique et des petits projets perso, et à terme, je me vois tech lead tout en gardant un pied dans le développement.
@@ -39,7 +39,7 @@ export default function PresentationPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mes centres d'intérêt</h2>
         <p>
-          En dehors du travail, je suis un joueur sérieux, captivé par le monde des jeux vidéo et leur conception. C'est cette passion qui m'a ouvert les portes du développement : mes premières lignes de code ont été utilisées pour modifier mes jeux préférés. Cette première exposition a éveillé ma vocation et m'a naturellement orienté vers ma carrière actuelle. J'aime toujours aujourd'hui créer des mods, concevoir des niveaux ou des idées de mécaniques de jeu, ce qui me pousse à innover, à m'inspirer et à éprouver de nouvelles compétences techniques. Explorer ces monds de manière virtuelle, rejouer ces moments avec d'autres joueurs ou découvrir les choix de conception qui ont présidé à chacun jeu m'enthousiasment toujours et m'améliorent en tant que développeur.
+          En dehors du travail, je suis un joueur sérieux, captivé par le monde des jeux vidéo et leur conception. C'est cette passion qui m​'a ouvert les portes du développement : mes premières lignes de code ont été utilisées pour modifier mes jeux préférés​. Cette première exposition a éveillé ma vocation et m'a naturellement orienté vers ma carrière actuelle. J'aime toujours aujourd'hui créer des mods, concevoir des niveaux ou des idées de mécaniques de jeu, ce qui me pousse à innover, à m'inspirer et à éprouver de nouvelles compétences techniques. Explorer ces monds de manière virtuelle, rejouer ces moments avec d'autres joueurs ou découvrir les choix de conception qui ont présidé à chacun jeu m'enthousiasment toujours et m'améliorent en tant que développeur.
         </p>
       </section>
 
