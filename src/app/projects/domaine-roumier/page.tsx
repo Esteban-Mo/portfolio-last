@@ -16,10 +16,6 @@ const technicalSkills = [
   { name: 'MongoDB', path: '/skills/databases' },
   { name: 'Leaflet', path: '/skills/geographics' }, 
   { name: 'JavaScript', path: '/skills/programming' }, 
-  { name: 'NPM', path: '/skills/tools' },
-  { name: 'Ubuntu / VPS', path: '/skills/tools' }, // Combining server tech
-  { name: 'Caddy / PM2', path: '/skills/tools' }, // Combining server management
-  { name: 'DNS Management', path: '/skills/tools' },
 ];
 
 const humanSkills = [

@@ -17,7 +17,6 @@ const technicalSkills = [
   { name: 'Prisma', path: '/skills/databases' },
   { name: 'Leaflet', path: '/skills/geographics' }, 
   { name: 'Material UI', path: '/skills/frameworks' },
-  { name: 'NPM', path: '/skills/tools' },
   { name: 'Custom Mapping', path: '/skills/geographics' }, // Specific Leaflet usage
   { name: 'Parallax Effects', path: '/skills/frameworks' }, // UI enhancement
   { name: 'Authentication / Roles', path: '/skills/frameworks' }, // Implied features
@@ -28,8 +27,6 @@ const humanSkills = [
   { name: 'Project Management (Iterative)', path: '/skills/organization' }, 
   { name: 'Community Feedback Integration', path: '/skills/communication' },
   { name: 'Documentation', path: '/skills/documentation' },
-  { name: 'UX/UI Design Focus', path: '/skills/frameworks' }, // User experience goal
-  { name: 'Problem Solving (Map Integration)', path: '/skills/autonomy' },
 ];
 
 export default function AgenceWalkerPage() {

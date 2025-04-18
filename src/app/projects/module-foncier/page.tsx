@@ -17,9 +17,6 @@ const technicalSkills = [
   { name: 'Prisma', path: '/skills/databases' },      
   { name: 'PostgreSQL', path: '/skills/databases' },
   { name: 'Material UI', path: '/skills/frameworks' },
-  { name: 'GitHub', path: '/skills/tools' }, // Replaced Azure DevOps
-  { name: 'Figma', path: '/skills/tools' },
-  { name: 'Draw.io', path: '/skills/tools' },
   // { name: 'Performance Optimization', path: '/skills/programming' }, // Mentioned but maybe too specific?
 ];
 
@@ -28,7 +25,6 @@ const humanSkills = [
   { name: 'Méthodologie Agile', path: '/skills/organization' }, 
   { name: 'Gestion de Projet (Agile)', path: '/skills/organization' },
   { name: 'Communication Technique', path: '/skills/communication' },
-  { name: 'Revue de Code', path: '/skills/tools' }, // Could be tools or communication
   { name: 'Adaptabilité', path: '/skills/autonomy' },
   // { name: 'Pair Programming', path: '/skills/communication' }, // Mentioned as punctual
   // { name: 'Résolution de Conflits (Merge)', path: '/skills/tools' }, // Maybe too specific?
