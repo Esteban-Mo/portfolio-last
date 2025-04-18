@@ -18,49 +18,61 @@ import { usePathname } from 'next/navigation';
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-    const [activeSection, setActiveSection] = useState(`home`);
-    const [showCompetencesMenu, setShowCompetencesMenu] = useState(false);
     const pathname = usePathname();
+    const [activeSection, setActiveSection] = useState(() => {
+        if (pathname === '/presentation') return 'presentation';
+        if (pathname === '/parcours') return 'parcours';
+        return 'home';
+    });
+    const [showCompetencesMenu, setShowCompetencesMenu] = useState(false);
 
     useEffect(() => {
         if (pathname === '/presentation') {
             setActiveSection('presentation');
-            return;
-        }
-        
-        if (pathname === '/parcours') {
+        } else if (pathname === '/parcours') {
             setActiveSection('parcours');
-            return;
-        }
-
-        const handleScroll = () => {
-            const sections = [`home`, `skills`, `projects`, `contact`];
-            const viewportHeight = window.innerHeight;
-            
-            const scrollThreshold = window.scrollY + (viewportHeight * 0.4);
-
-            let currentSection = sections[0];
-            for (const sectionId of sections) {
-                const element = document.getElementById(sectionId);
-                if (element && element.offsetTop <= scrollThreshold) {
-                    currentSection = sectionId;
-                } else {
-                    break;
+        } else if (pathname === '/') {
+            const handleScroll = () => {
+                const sections = [`home`, 'presentation-preview', `skills`, `projects`, `contact`];
+                const viewportHeight = window.innerHeight;
+                const scrollThreshold = window.scrollY + (viewportHeight * 0.4);
+    
+                let currentSectionId = sections[0];
+                for (const sectionId of sections) {
+                    const element = document.getElementById(sectionId);
+                    if (element && element.offsetTop <= scrollThreshold) {
+                        currentSectionId = sectionId;
+                    } else if (element) {
+                        break;
+                    }
                 }
-            }
-            
-            const isAtBottom = window.scrollY + viewportHeight >= document.documentElement.scrollHeight - 50;
-            if (isAtBottom) {
-                setActiveSection(sections[sections.length - 1]);
-            } else {
-                 setActiveSection(currentSection);
-            }
-        };
+                
+                const isAtBottom = window.scrollY + viewportHeight >= document.documentElement.scrollHeight - 50;
+                
+                let finalActiveSectionId = isAtBottom ? sections[sections.length - 1] : currentSectionId;
 
-        window.addEventListener(`scroll`, handleScroll, { passive: true });
-        handleScroll();
-        
-        return () => window.removeEventListener(`scroll`, handleScroll);
+                if (finalActiveSectionId === 'presentation-preview') {
+                    finalActiveSectionId = 'presentation';
+                }
+                if (finalActiveSectionId === 'skills') {
+                    finalActiveSectionId = 'skills';
+                }
+                if (finalActiveSectionId === 'projects') {
+                    finalActiveSectionId = 'projects';
+                }
+                
+                setActiveSection(prev => prev === finalActiveSectionId ? prev : finalActiveSectionId);
+            };
+    
+            window.addEventListener(`scroll`, handleScroll, { passive: true });
+            handleScroll();
+            
+            return () => window.removeEventListener(`scroll`, handleScroll);
+        } else {
+            // Si on n'est sur aucune des pages gérées (accueil, prez, parcours)
+            // On pourrait définir un état par défaut ou ne rien faire
+            // Pour l'instant, on ne fait rien, l'état initial reste
+        }
     }, [pathname]);
 
     const getLinkColor = (sectionId: string, linkId: string) => {
@@ -69,7 +81,9 @@ export default function Header() {
     };
 
     const scrollToSection = (sectionId: string) => {
-        const element = document.getElementById(sectionId);
+        const targetElementId = sectionId === 'presentation' ? 'presentation-preview' : sectionId;
+
+        const element = document.getElementById(targetElementId);
         if (element) {
             const headerOffset = 80;
             const elementPosition = element.getBoundingClientRect().top + window.scrollY;
@@ -80,7 +94,11 @@ export default function Header() {
                 behavior: "smooth"
             });
         } else {
-            window.location.href = `/#${sectionId}`;
+            if (['home', 'presentation-preview', 'skills', 'projects', 'contact'].includes(targetElementId)) {
+                window.location.href = `/#${targetElementId}`;
+            } else {
+                console.warn(`Element with ID '${targetElementId}' not found for scrolling.`);
+            }
         }
         setIsMenuOpen(false);
     };
@@ -208,7 +226,6 @@ export default function Header() {
                 </a>
                 <div 
                     style={{ position: 'relative' }}
-                    onClick={() => setShowCompetencesMenu(!showCompetencesMenu)}
                 >
                     <a 
                         onClick={() => scrollToSection(`skills`)}
