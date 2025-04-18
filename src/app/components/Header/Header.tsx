@@ -5,6 +5,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import PersonIcon from '@mui/icons-material/Person';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+import WorkIcon from '@mui/icons-material/Work';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -33,57 +34,52 @@ export default function Header() {
         }
 
         const handleScroll = () => {
-            // Réalisations temporairement retiré
-            const sections = [`home`, `competences`, /* `realisations`, */ `contact`];
+            const sections = [`home`, `skills`, `projects`, `contact`];
             const viewportHeight = window.innerHeight;
             
-            // Point de référence au centre de l'écran
-            const viewportMiddle = window.scrollY + (viewportHeight / 2);
+            const scrollThreshold = window.scrollY + (viewportHeight * 0.4);
 
-            // Trouver la section la plus proche du centre de l'écran
-            let closestSection = sections[0];
-            let closestDistance = Infinity;
-
-            sections.forEach(sectionId => {
+            let currentSection = sections[0];
+            for (const sectionId of sections) {
                 const element = document.getElementById(sectionId);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    const sectionMiddle = window.scrollY + rect.top + (rect.height / 2);
-                    const distance = Math.abs(viewportMiddle - sectionMiddle);
-
-                    if (distance < closestDistance) {
-                        closestDistance = distance;
-                        closestSection = sectionId;
-                    }
+                if (element && element.offsetTop <= scrollThreshold) {
+                    currentSection = sectionId;
+                } else {
+                    break;
                 }
-            });
-
-            // Cas spécial pour la dernière section (contact)
+            }
+            
             const isAtBottom = window.scrollY + viewportHeight >= document.documentElement.scrollHeight - 50;
             if (isAtBottom) {
-                setActiveSection(`contact`);
+                setActiveSection(sections[sections.length - 1]);
             } else {
-                setActiveSection(closestSection);
+                 setActiveSection(currentSection);
             }
         };
 
-        window.addEventListener(`scroll`, handleScroll);
-        handleScroll(); // Appel initial
+        window.addEventListener(`scroll`, handleScroll, { passive: true });
+        handleScroll();
         
         return () => window.removeEventListener(`scroll`, handleScroll);
     }, [pathname]);
 
     const getLinkColor = (sectionId: string, linkId: string) => {
-        if (activeSection === sectionId) return `#60A5FA`;
-        return hoveredLink === linkId ? `#60A5FA` : `#fff`;
+        if (activeSection === sectionId || hoveredLink === linkId) return `#60A5FA`;
+        return `#fff`;
     };
 
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({ behavior: `smooth` });
+            const headerOffset = 80;
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - headerOffset;
+    
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
         } else {
-            // Si l'élément n'existe pas, on est probablement sur une autre page
             window.location.href = `/#${sectionId}`;
         }
         setIsMenuOpen(false);
@@ -144,27 +140,25 @@ export default function Header() {
                     onMouseLeave={() => setShowCompetencesMenu(false)}
                 >
                     <a 
-                        onClick={() => scrollToSection(`competences`)}
+                        onClick={() => scrollToSection(`skills`)}
                         className={styles.link}
-                        style={{ color: getLinkColor(`competences`, `competences`), cursor: `pointer` }}
-                        onMouseEnter={() => setHoveredLink(`competences`)}
+                        style={{ color: getLinkColor(`skills`, `skills`), cursor: `pointer` }}
+                        onMouseEnter={() => setHoveredLink(`skills`)}
                         onMouseLeave={() => setHoveredLink(null)}
                     >
                         <CodeIcon /> Compétences
                     </a>
                     {showCompetencesMenu && <CompetencesMenu />}
                 </div>
-                {/* Temporairement retiré
                 <a 
-                    onClick={() => scrollToSection(`realisations`)}
+                    onClick={() => scrollToSection(`projects`)}
                     className={styles.link}
-                    style={{ color: getLinkColor(`realisations`, `realisations`), cursor: `pointer` }}
+                    style={{ color: getLinkColor(`projects`, `realisations`), cursor: `pointer` }}
                     onMouseEnter={() => setHoveredLink(`realisations`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <WorkIcon /> Réalisations
                 </a>
-                */}
                 <a 
                     onClick={() => scrollToSection(`contact`)}
                     className={styles.link}
@@ -217,26 +211,24 @@ export default function Header() {
                     onClick={() => setShowCompetencesMenu(!showCompetencesMenu)}
                 >
                     <a 
+                        onClick={() => scrollToSection(`skills`)}
                         className={`${styles.link} ${styles.mobileLink}`}
-                        style={{ color: getLinkColor(`competences`, `competences`), cursor: `pointer` }}
-                        onMouseEnter={() => setHoveredLink(`competences`)}
+                        style={{ color: getLinkColor(`skills`, `skills`), cursor: `pointer` }}
+                        onMouseEnter={() => setHoveredLink(`skills`)}
                         onMouseLeave={() => setHoveredLink(null)}
                     >
                         <CodeIcon /> Compétences
                     </a>
-                    {showCompetencesMenu && <CompetencesMenu />}
                 </div>
-                {/* Temporairement retiré
                 <a 
-                    onClick={() => scrollToSection(`realisations`)}
+                    onClick={() => scrollToSection(`projects`)}
                     className={`${styles.link} ${styles.mobileLink}`}
-                    style={{ color: getLinkColor(`realisations`, `realisations`), cursor: `pointer` }}
+                    style={{ color: getLinkColor(`projects`, `realisations`), cursor: `pointer` }}
                     onMouseEnter={() => setHoveredLink(`realisations`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <WorkIcon /> Réalisations
                 </a>
-                */}
                 <a 
                     onClick={() => scrollToSection(`contact`)}
                     className={`${styles.link} ${styles.mobileLink}`}
