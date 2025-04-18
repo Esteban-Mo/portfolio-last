@@ -100,146 +100,146 @@ export default function ModuleFoncierPage() {
 
       {/* Main Content Sections */}
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>1 – INTRODUCTION</h2>
+        <h2 className={styles.sectionTitle}>1 – INTRODUCTION : BIENVENUE SUR LE PROJET ACT !</h2>
         <p>
-          Cette troisième réalisation s'inscrit dans la continuité de mon parcours en alternance chez Valeco et concerne ma participation au développement d'un nouveau projet majeur, nommé Act, qui a démarré après la finalisation du projet Atlas. Il s'agit d'un projet distinct des précédents.
+          Après l'aventure BDD Turbine et le développement d'Atlas, ma troisième grande mission chez Valeco pendant mon alternance, ça a été de rejoindre l'équipe qui travaillait sur un nouveau projet d'envergure, baptisé Act. C'est un projet complètement distinct des deux premiers, démarré après la fin d'Atlas.
         </p>
         <p>
-          Le projet Act vise à fournir une application moderne pour la gestion des aspects fonciers (gestion des terrains, contrats, etc.) essentiels à l'activité de Valeco. De nombreux services au sein de l'entreprise sont concernés par cette thématique et constituent les utilisateurs cibles de cette nouvelle solution. Leur besoin principal était de disposer d'un outil capable d'accueillir de nouvelles fonctionnalités, ce que ne permettait plus l'ancien "Module Foncier" qu'Act vient remplacer.
+          Le but d'Act, c'est de fournir une application moderne pour gérer tout ce qui touche au foncier chez Valeco – la gestion des terrains, les contrats associés, etc. C'est un sujet transversal qui concerne beaucoup de services dans l'entreprise, et ce sont eux les utilisateurs cibles. Leur principal besoin, c'était d'avoir enfin un outil capable d'accueillir de nouvelles fonctionnalités, ce que ne permettait plus du tout l'ancien "Module Foncier" qu'Act est venu remplacer.
         </p>
         <p>
-          La motivation première de ce projet était donc de moderniser une solution vieillissante, qui n'était plus maintenue et sur laquelle toute évolution était devenue impossible. Contrairement à mes projets précédents menés en autonomie, j'ai rejoint le projet Act en cours de route, intégrant ainsi une équipe de développement déjà constituée. Ce fut ma première expérience de travail en équipe et suivant une véritable méthode Agile au sein de Valeco. Les technologies employées restaient cohérentes avec l'environnement technique de l'entreprise : Next.js, React, TypeScript et Prisma.
+          Du coup, la motivation première était claire : moderniser une solution qui avait vieilli, qui n'était plus maintenue et sur laquelle toute évolution était devenue mission impossible. La grosse différence pour moi sur ce projet, c'est que je ne l'ai pas créé de zéro en solo. J'ai rejoint l'équipe de développement d'Act en cours de route. C'était donc ma première vraie expérience de travail en équipe chez Valeco, et aussi ma première immersion dans une méthode Agile bien structurée. Côté technologies, pas de révolution, on est resté sur l'environnement technique habituel de l'entreprise : Next.js, React, TypeScript et Prisma.
         </p>
         <p>
-          Cette description se concentrera sur mon intégration au sein de l'équipe projet, ma contribution full-stack au développement du module Act, et mon expérience du travail collaboratif dans un cadre Agile.
+          Ici, je vais donc surtout vous parler de comment s'est passée mon intégration dans cette équipe, de ma contribution en tant que développeur full-stack sur Act, et de ce que j'ai appris en découvrant le travail collaboratif dans un cadre Agile.
         </p>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>2 – OBJECTIFS</h2>
+        <h2 className={styles.sectionTitle}>2 – OBJECTIFS : CE QU'ON VISait (LE PROJET ET MOI)</h2>
         <p>
-          En rejoignant le projet Act en cours de développement, mes objectifs se sont articulés autour des ambitions globales du projet et de mon propre développement au sein de cette nouvelle dynamique d'équipe.
+          En arrivant sur le projet Act qui était déjà sur les rails, mes objectifs personnels se sont naturellement alignés avec les ambitions globales du projet et cette nouvelle façon de travailler en équipe.
         </p>
-        <h3 className={styles.subSectionTitle}>2.1 – OBJECTIFS TECHNIQUES (du Projet Act)</h3>
+        <h3 className={styles.subSectionTitle}>2.1 – Les Objectifs Techniques (du Projet Act lui-même)</h3>
         <p>
-          Le projet visait collectivement plusieurs buts techniques majeurs :
+          Collectivement, avec l'équipe, on visait plusieurs buts techniques majeurs :
         </p>
         <ul className={styles.list}>
-          <li>Moderniser et centraliser la gestion foncière : L'objectif principal était de remplacer l'ancien outil par une application moderne, capable de centraliser efficacement toutes les informations relatives aux terrains, aux contacts associés, aux actes juridiques, etc.</li>
-          <li>Permettre l'évolutivité fonctionnelle : Une attente forte était de rendre possible l'ajout de nouvelles fonctionnalités cruciales pour les utilisateurs, telles que des systèmes de priorisation de tâches, des notifications intégrées, et potentiellement bien d'autres améliorations futures.</li>
-          <li>Améliorer les performances et la maintenabilité : Une amélioration significative des performances par rapport à l'ancien outil était recherchée, tout comme une architecture logicielle garantissant la modularité et la maintenabilité à long terme. Il est à noter que, par manque de temps sur la globalité du projet, la mise en place de tests unitaires n'a pas été priorisée par l'équipe.</li>
+          <li>Moderniser et centraliser la gestion foncière : L'objectif numéro un, c'était de remplacer l'ancien outil par une application moderne, capable de centraliser efficacement toutes les informations importantes : les terrains, les contacts liés, les actes juridiques, etc.</li>
+          <li>Permettre l'évolution fonctionnelle : Il y avait une forte attente pour que cette nouvelle appli permette enfin d'ajouter des fonctionnalités cruciales que les utilisateurs réclamaient, comme des systèmes pour mieux prioriser leurs tâches, des notifications intégrées, et potentiellement plein d'autres améliorations à venir.</li>
+          <li>Améliorer les perfs et la maintenance : On cherchait aussi à ce que la nouvelle appli soit nettement plus rapide que l'ancienne, et à construire une architecture logicielle propre, modulaire, qui soit facile à maintenir sur le long terme. (Petit bémol à noter : faute de temps sur l'ensemble du projet, l'équipe n'a pas eu la possibilité de prioriser la mise en place de tests unitaires.)</li>
         </ul>
-        <h3 className={styles.subSectionTitle}>2.2 – OBJECTIFS HUMAINS / PERSONNELS (En rejoignant l'équipe)</h3>
+        <h3 className={styles.subSectionTitle}>2.2 – Mes Objectifs Personnels / Humains (en rejoignant l'équipe)</h3>
         <p>
-          Pour ma part, intégrer ce projet représentait plusieurs objectifs personnels et professionnels clés :
+          Pour ma part, intégrer ce projet, c'était l'occasion d'atteindre plusieurs objectifs clés pour mon développement :
         </p>
         <ul className={styles.list}>
-          <li>Intégration et collaboration Agile : Mon premier objectif était de réussir mon intégration au sein d'une équipe Agile fonctionnant avec ses rituels : revues de code, pair programming ponctuel, participation active aux réunions client, présentations lors des points quotidiens/hebdomadaires, rétrospectives, et surtout les sprint planning (sélection des User Stories, estimation, définition des objectifs de sprint...). Je visais à contribuer activement à l'effort collectif.</li>
-          <li>Adaptation technique et montée en compétences : Il était essentiel pour moi de rapidement comprendre et m'adapter à l'architecture existante d'Act. Je souhaitais travailler sur les logiques métiers spécifiques au foncier et aborder de nouvelles problématiques de performance, comme l'optimisation de l'affichage de grands volumes de données (plus de 150 000 contacts). Un objectif constant était également de maintenir une cohérence logique dans mon code par rapport à celui de mes collègues.</li>
-          <li>Développement des compétences d'équipe : Ce projet était une opportunité majeure pour développer mes compétences relationnelles au sein d'une équipe technique, de comprendre les méthodes Agiles en pratique, de bénéficier de l'appui de collègues sur des sujets nécessitant plusieurs expertises, d'apprendre à lire et comprendre efficacement le code d'autrui, de renforcer ma communication et de gérer les résolutions de conflits (notamment lors des merges de code).</li>
-        </ul>
-      </section>
-
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>3 – CONTEXTE HUMAIN</h2>
-        <p>
-          En rejoignant le projet Act, j'ai intégré une équipe dédiée de cinq personnes, fonctionnant selon une méthodologie Agile. L'équipe était composée de trois développeurs Fullstack (dont moi-même), d'un Product Owner (PO) et de mon Tech Lead, qui endossait également le rôle de Scrum Master pour faciliter le processus Agile. Le Product Owner est le membre de l'équipe responsable de représenter les besoins des utilisateurs finaux, de définir et prioriser les fonctionnalités à développer (notamment via la rédaction des User Stories) et de maximiser la valeur du produit créé.
-        </p>
-        <p>
-          Au quotidien, ma collaboration s'effectuait principalement avec l'ensemble de l'équipe. Le Product Owner était un interlocuteur clé, présent à chaque réunion, et la personne à contacter pour toute clarification nécessaire sur les User Stories ou les détails fonctionnels. Si les décisions techniques majeures étaient prises par le Tech Lead, celui-ci nous consultait systématiquement afin de recueillir nos avis et expertises de développeurs.
-        </p>
-        <p>
-          Le rythme de travail et les interactions étaient ponctués par les cérémonies Agiles classiques : daily stand-ups pour la synchronisation quotidienne, sprint planning pour définir le contenu de chaque itération, revues de sprint (démos) pour présenter les avancées, et rétrospectives pour l'amélioration continue de l'équipe.
-        </p>
-        <p>
-          La communication avec les utilisateurs finaux du Bureau d'Études était principalement assurée par le Product Owner, servant d'interface entre leurs besoins et l'équipe de développement. Cependant, lors des démonstrations de fin de sprint, l'équipe entière participait collectivement, et chaque membre avait l'occasion de présenter les fonctionnalités qu'il avait personnellement réalisées.
-        </p>
-      </section>
-
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>4 – CONTEXTE TECHNIQUE</h2>
-        <p>
-          L'application Act repose sur le socle technique standard de Valeco : Next.js avec React et TypeScript pour le développement front-end et back-end, l'ORM Prisma et une base de données PostgreSQL hébergée sur les serveurs internes. La bibliothèque Material UI a été utilisée pour les composants d'interface. En rejoignant le projet, j'ai dû m'adapter à une structure spécifique de dossiers et de fichiers déjà mise en place par l'équipe, ce qui s'est fait sans difficulté majeure.
-        </p>
-        <p>
-          Un changement notable par rapport aux outils précédents a été l'adoption de GitHub comme plateforme centrale. GitHub était utilisé non seulement pour le versioning du code (en remplacement d'Azure DevOps), mais également pour la gestion de projet Agile (suivi des User Stories, planification des sprints, etc., probablement via GitHub Projects ou Issues). Pour la collaboration et la conception, l'équipe utilisait Microsoft Teams pour la communication, Figma pour la réalisation des maquettes d'interface, et Draw.io pour la modélisation des données (MCD/MLD). Notion restait l'outil privilégié pour la documentation détaillée.
-        </p>
-      </section>
-
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>5 – ENJEUX ET RISQUES</h2>
-        <h3 className={styles.subSectionTitle}>5.1 – ENJEUX</h3>
-        <p>
-          Le projet Act revêtait plusieurs enjeux majeurs pour Valeco. Il s'agissait avant tout de garantir la continuité et l'évolutivité de la gestion foncière, un processus critique pour l'entreprise. Le succès du projet devait aussi démontrer la capacité de l'équipe à livrer rapidement un outil moderne et enfin débloquer l'implémentation de nouvelles fonctionnalités attendues depuis longtemps par les utilisateurs. Un enjeu clé était d'ailleurs de livrer une première version viable en production dans un délai court.
-        </p>
-        <p>
-          Secondairement, ce projet contribuait à l'objectif d'harmoniser les outils de gestion internes chez Valeco et de fournir aux utilisateurs une application performante au quotidien, notamment en termes de rapidité de recherche et de création de données.
-        </p>
-        <h3 className={styles.subSectionTitle}>5.2 – RISQUES</h3>
-        <p>
-          Plusieurs risques ont été identifiés ou rencontrés durant le projet :
-        </p>
-        <ul className={styles.list}>
-          <li>Contrainte temporelle : Le délai très limité avant la mise en production de la première version a engendré une légère surcharge de travail pour l'équipe, bien que cela n'ait pas conduit à une situation de "rush" préjudiciable.</li>
-          <li>Migration des données : Bien que je n'aie pas directement participé à cette phase, le risque le plus significatif identifié collectivement concernait la migration des données depuis l'ancien système vers la nouvelle base de données, en raison de la complexité potentielle de l'opération.</li>
-          <li>Performances sur gros volumes : Des ralentissements notables ont été effectivement observés lors du chargement de certains jeux de données volumineux (comme les contacts). Face à cela, l'équipe a dû revoir l'approche technique en implémentant des techniques de virtualisation de données et de mise en cache passif afin d'assurer une navigation fluide pour l'utilisateur final.</li>
+          <li>M'intégrer et collaborer en Agile : Mon premier but, c'était de réussir à trouver ma place dans cette équipe Agile et d'adopter ses rituels : faire des revues de code, pratiquer un peu le pair programming, participer activement aux réunions (même celles avec le client via le PO), présenter mon travail aux points quotidiens/hebdo, contribuer aux rétrospectives... Et surtout, bien comprendre et m'impliquer dans les 'sprint planning' (choisir les User Stories, les estimer, définir les objectifs du sprint...). Je voulais vraiment apporter ma pierre à l'édifice collectif.</li>
+          <li>M'adapter techniquement et progresser : Il était essentiel pour moi de comprendre rapidement l'architecture existante d'Act pour être opérationnel. J'avais envie de travailler sur les logiques métier spécifiques au foncier et de me confronter à de nouvelles problématiques, notamment de performance, comme optimiser l'affichage quand on a d'énormes volumes de données (plus de 150 000 contacts, ça commence à faire !). Et bien sûr, un objectif constant, c'était de garder une cohérence dans mon code par rapport à celui de mes collègues.</li>
+          <li>Développer mes compétences d'équipier : C'était une super opportunité de travailler mes compétences relationnelles au sein d'une équipe technique, de voir comment l'Agile fonctionne en pratique, de pouvoir m'appuyer sur mes collègues quand un sujet était complexe, d'apprendre à lire et comprendre efficacement le code des autres (ce qui est un art !), de mieux communiquer et même de gérer les petits "conflits" techniques, comme lors des fusions de code (les fameux merges).</li>
         </ul>
       </section>
 
       <section className={styles.section}>
-         <h2 className={styles.sectionTitle}>6 – ÉTAPES DU PROJET</h2>
+        <h2 className={styles.sectionTitle}>3 – CONTEXTE HUMAIN : L'ÉQUIPE ACT EN MODE AGILE</h2>
+        <p>
+          En arrivant sur Act, j'ai donc intégré une équipe dédiée de cinq personnes, qui fonctionnait selon une méthode Agile. L'équipe était composée de trois développeurs Fullstack (dont moi), d'un Product Owner (PO) et de mon Tech Lead, qui jouait aussi le rôle de Scrum Master pour faciliter le processus Agile. Pour rappel, le Product Owner est celui qui, dans l'équipe, représente la voix des utilisateurs, définit et priorise ce qu'il faut développer (souvent sous forme de "User Stories"), et cherche à maximiser la valeur de ce qu'on produit.
+        </p>
+        <p>
+          Au quotidien, ma collaboration se faisait vraiment avec toute l'équipe. Le PO était un interlocuteur privilégié, présent à toutes les réunions, et c'est vers lui qu'on se tournait pour toute question sur une User Story ou un détail fonctionnel. Les grosses décisions techniques restaient du ressοrt du Tech Lead, mais il nous consultait systématiquement pour avoir nos avis de développeurs.
+        </p>
+        <p>
+          Notre rythme de travail était ponctué par les cérémonies Agiles classiques : les "daily stand-ups" chaque matin pour se synchroniser rapidement, les "sprint planning" pour définir le travail des deux semaines à venir, les revues de sprint (où on faisait des démos) pour montrer nos avancées, et les rétrospectives pour réfléchir ensemble à comment améliorer notre fonctionnement.
+        </p>
+        <p>
+          La communication directe avec les utilisateurs finaux du Bureau d'Études passait principalement par notre PO, qui faisait l'interface. Par contre, lors des démonstrations de fin de sprint, toute l'équipe était présente et chacun de nous avait l'occasion de présenter les fonctionnalités sur lesquelles il avait personnellement travaillé .
+        </p>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>4 – CONTEXTE TECHNIQUE : LES OUTILS DE L'ÉQUIPE ACT</h2>
+        <p>
+          L'application Act repose sur le socle technique standard de Valecο : Next.js avec React et TypeScript pour le développement front et back, l'ORM Prisma et une base de données PοstgreSQL hébergée en interne. La bibliothèque Material UI était utilisée pour les cοmpοsants d'interface. En arrivant sur le projet, j'ai dû m'adapter à une structure de dossiers et de fichiers spécifique que l'équipe avait déjà mise en place, mais ça s'est fait assez naturellement .
+        </p>
+        <p>
+          Un changement notable par rapport aux outils que j'utilisais avant, c'a été l'adoption de GitHub comme plateforme centrale. GitHub servait non seulement pour le versioning du code (en remplacement d'Azure DevOps), mais aussi pour toute la gestion de projet Agile (le suivi des User Stories, la planification des sprints, etc., sans doute via GitHub Projects ou Issues). Pour la collaboration et la conception, l'équipe utilisait Micrοsοft Teams pour communiquer, Figma pour faire les maquettes d'interface, et Draw.io pour modéliser les données (MCD/MLD). Nοtiοn restait l'outil de référence pour la documentation plus détaillée .
+        </p>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>5 – ENJEUX ET RISQUES : CE QUI MOTIVAIT (ET INQUIÉTAIT UN PEU)</h2>
+        <h3 className={styles.subSectionTitle}>5.1 – Les Enjeux : Pοurquοi Act était important ?</h3>
+        <p>
+          Le projet Act revêtait plusieurs enjeux majeurs pour Valeco. Il s'agissait avant tout de garantir la continuité et l'évolutivité de la gestion foncière, un processus vraiment critique pour l'entreprise. Le succès du projet devait aussi montrer la capacité de l'équipe à livrer rapidement un outil moderne et surtout, à enfin débloquer l'implémentation de nouvelles fonctionnalités attendues depuis longtemps par les utilisateurs . Un enjeu clé, d'ailleurs, était de livrer une première version viable en production dans un délai assez court.
+        </p>
+        <p>
+          Secondairement, ce projet contribuait à l'objectif d'harmoniser les οutils de gestion internes chez Valeco et de fournir aux utilisateurs une application performante au quotidien, notamment en termes de rapidité de recherche et de création de données.
+        </p>
+        <h3 className={styles.subSectionTitle}>5.2 – Les Risques : Les points de vigilance</h3>
+        <p>
+          Plusieurs risques ont été identifiés ou rencontrés pendant le projet :
+        </p>
+        <ul className={styles.list}>
+          <li>La pression du temps : Le délai très limité avant la mise en prοduction de la première version a engendré une certaine charge de travail pour l'équipe, même si on a réussi à éviter une situation de "rush" ingérable .</li>
+          <li>La migration des données : Même si je n'ai pas participé directement à cette phase, le risque le plus significatif identifié collectivement concernait la migration des données depuis l'ancien système vers la nouvelle base. C'est souvent une opération potentiellement complexe.</li>
+          <li>Les performances sur gros volumes : On a effectivement constaté des ralentissements notables quand on chargeait de très grandes quantités de données (comme la liste des contacts). Face à ça, l'équipe a dû revoir l'approche technique en mettant en place des techniques comme la virtualisation des listes et de la mise en cache pour assurer une navigation fluide pour l'utilisateur final .</li>
+        </ul>
+      </section>
+
+      <section className={styles.section}>
+         <h2 className={styles.sectionTitle}>6 – ÉTAPES DU PROJET : MON PARCOURS DANS L'ÉQUIPE</h2>
          <p>
-          Mon intervention sur le projet Act s'est déroulée en plusieurs phases, marquées par l'intégration dans une équipe Agile et la contribution à un projet déjà initié.
+          Mon intervention sur le projet Act s'est déroulée en plusieurs phases, marquées par l'intégration dans une équipe Agile et la contribution à un projеt déjà démarré .
         </p>
         <h3 className={styles.subSectionTitle}>6.1 – Intégration et Prise en Main</h3>
         <p>
-          Mon intégration au sein de l'équipe s'est très bien déroulée, facilitée par un environnement de travail ouvert. Pour me familiariser avec la base de code existante, j'ai procédé par lecture de code, en sollicitant ponctuellement des explications auprès de mes collègues sur certains principes d'architecture, avant de commencer à expérimenter. Ma première contribution majeure a été le développement d'une fonctionnalité conséquente : la gestion des "Événements", en commençant par la phase de maquettage.
+          Mon intégration dans l'équipe s'est très bien passée , l'ambiance était vraiment ouverte et collaborative. Pour me familiariser avec la base de code еxistante, j'ai commencé par la lire attentivement, en n'hésitant pas à demander des explications à mes collègues sur certains principes d'architecture. Ensuite, j'ai pu commencer à expérimenter. Ma première contribution significative a été le développеment d'une fonctionnalité assez conséquente : la gestion des "Événements " , en commençant par la phase de maquettage .
         </p>
          <h3 className={styles.subSectionTitle}>6.2 – Contribution au Développement des Fonctionnalités Clés</h3>
         <p>
-          Par la suite, mes contributions full-stack se sont concentrées sur des modules centraux de l'application, notamment le Tableau de bord et le module d'Activités et Événements. Ce travail impliquait typiquement la gestion de données complexes, la création et la validation de formulaires, ainsi que les interactions avec la base de données (création, lecture, mise à jour, suppression) pour implémenter les différentes User Stories définies par le Product Owner (concernant par exemple la gestion des contacts, des missions foncières, des statuts, des commentaires, etc.).
+          Par la suite, mes contributions en full-stack se sont concentrées sur des modules centraux de l'application, notamment le Tableau de bord et le module d'Activités et Événements. Concrètement, ce travail impliquait souvent de gérer des données complexes , de créer et valider des formulaires, et bien sûr de faire toutes les interactions avec la base de données ( création, lecture, mise à jour, suppression ) pour implémenter les différentes User Stories définiеs par le PO (ça pouvait concerner la gestion des contacts, des missions foncières, des statuts, des commentaires, еtc. ).
         </p>
          <h3 className={styles.subSectionTitle}>6.3 – Participation Active au Cycle Agile</h3>
          <p>
-          J'ai pleinement participé à l'ensemble des rituels Agiles de l'équipe. Lors des daily stand-ups, je présentais le travail de la veille et mon avancement par rapport aux prévisions. Les weekly étaient l'occasion de faire un bilan hebdomadaire et de présenter nos avancées aux autres équipes IT. Durant les sprint planning, je participais à la sélection et à l'estimation de l'effort des User Stories prioritaires. En fin de sprint, les rétrospectives permettaient d'analyser collectivement nos méthodes de travail. Pour les démos de fin de sprint, après avoir testé mes propres ajouts sur un environnement commun, je préparais une "feuille de route" pour présenter mes réalisations de manière claire et fluide.
+          J'ai pleinement participé à l'ensemble des rituels Agiles de l'équipe. Aux daily stand-ups, je présentais ce que j'avais fait la veille et où j'en étais. Les weekly étaient l'occasion de faire un bilan de la semaine et de montrer nos avancées aux autres équipes IT. Durant les sprint planning, je participais à la sélection et à l'estimation de l'effort des User Stories qu'on allait traiter. En fin de sprint, les rétrospectives permettaient de discuter ensemble de nos méthodes de travail pour nous améliorer. Pour les démos de fin de sprint, après avoir biеn testé mes propres ajouts sur un environnement commun , je préparais une petite "feuille de route" pour présenter mes réalisations de manière claire et fluide .
         </p>
          <h3 className={styles.subSectionTitle}>6.4 – Adaptation Technique et Collaboration</h3>
          <p>
-          Un défi notable a été l'intégration avec certaines parties du code existant, développées par des collègues ayant parfois des approches de codage très spécifiques et différentes des conventions habituelles. Cela a nécessité un effort d'adaptation, mais grâce aux discussions avec les collègues concernés et à l'appui de mon Tech Lead, l'intégration s'est finalement bien déroulée.
+          Un défi intéressant a été de devoir m intégrer avec certaines parties du code existant, développées par des collègues qui avaient parfois des approches de codage très spécifiques, un peu différentes des conventions habituelles. Ça a demandé un effort d'adaptation , mais grâce aux discussions avec les collègues concernés et à l'appui de mon Tech Lead, l'intégration s'est finalement toujours bien déroulée.
         </p>
         <h3 className={styles.subSectionTitle}>6.5 – Processus de Qualité et Validation</h3>
          <p>
-          La qualité du code était assurée par un processus basé sur les Pull Requests (PR). Une PR est une demande faite par un développeur pour intégrer les modifications de son code dans la branche principale du projet, permettant ainsi la revue par ses pairs. À la création d'une PR, un environnement de test personnel était automatiquement déployé, sur lequel je réalisais une validation complète de mes développements. Une fois cette étape passée, le Product Owner effectuait sa propre vérification fonctionnelle. Si tout était conforme, la PR était validée et fusionnée à la branche principale ("main").
+          La qualité du code était assurée par un processus basé sur les Pull Requests (PR). Une PR, c'еst une demande que fait un développeur pour intégrer son code dans la branche principale, ce qui permet aux autres de le relire avant. Quand je créais une PR, un environnement de test juste pour moi était automatiquement déployé, sur lequel je réalisais une validation complète de mes développements . Unе fois cette étape passée, le Product Owner effectuait sa propre vérification fonctionnelle. Si tout était bon, la PR était validée et fusionnée à la branche principale ("main").
         </p>
-         <h3 className={styles.subSectionTitle}>6.6 – Projet en Cours</h3>
+         <h3 className={styles.subSectionTitle}>6.6 – Projet Toujours en Cours...</h3>
         <p>
-          Contrairement aux projets précédents, la première mise en production n'a pas marqué la fin de mon intervention. Le projet Act est toujours en développement très actif à ce jour, avec des améliorations et de nouvelles fonctionnalités ajoutées continuellement par l'équipe. Aucune documentation spécifique de transfert n'a été nécessaire pour mes contributions, le travail se poursuivant de manière itérative.
-        </p>
-      </section>
-
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>7 – FIN DU PROJET ET PERSPECTIVES D'AVENIR</h2>
-        <p>
-          À ce jour, l'application Act est dans un état stable et déployée en production, mais elle demeure en phase d'amélioration continue. Son adoption par les différents services concernés par le foncier chez Valeco est progressive, avec de plus en plus d'utilisateurs qui réalisent la transition depuis l'ancien outil.
-        </p>
-        <p>
-          L'équipe de développement, dont je fais partie, se concentre actuellement sur le traitement des retours utilisateurs (corrections de bugs ou modifications mineures) afin de consolider l'existant. Dans un second temps, la roadmap prévoit l'implémentation de nouvelles fonctionnalités importantes, comme la gestion fine des droits par utilisateur, parmi d'autres évolutions planifiées pour enrichir l'application.
-        </p>
-        <p>
-          La vision à long terme pour Act est claire : cet outil a vocation à devenir la plateforme centrale et unique pour l'ensemble de la gestion foncière au sein de Valeco. Le projet est donc loin d'être terminé et représente un investissement stratégique avec un potentiel d'évolution important pour l'entreprise.
+          Contrairement aux projets précédеnts, la première mise en production n'a pas marqué la fin de mon intervention. Le projet Act est toujours en développement très actif à ce jour (vendredi 18 avril 2025), l'équipe ajoute continuellement des améliorations et de nouvelles fonctionnalités. Du coup, pas besoin de documentation spécifique de transfert pour mes contributions, puisque le travail se poursuit de manière itérative au sein de l'équipe.
         </p>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>8 – CE QUE JE RETIENS</h2>
+        <h2 className={styles.sectionTitle}>7 – FIN DU PROJET ET PERSPECTIVES D'AVENIR : ACT CONTINUE SA ROUTE</h2>
         <p>
-          Ma participation au projet Act a été une expérience particulièrement formatrice, notamment grâce à la découverte et à l'application de la méthodologie Agile. J'ai énormément apprécié cette manière de procéder : avoir des tâches prédéfinies dans un cadre structuré (les sprints) et une vision claire de la direction du projet est un vrai plus. Cela m'a appris à mieux ordonner mon travail pour pouvoir en rendre compte efficacement chaque jour lors des daily stand-ups, et à expliciter clairement mes avancées ou mes éventuels points de blocage.
+          À l'heure actuelle, l'application Act est dans un état stable et déployée en production, mais elle reste en phase d'amélioration continue. Son adoption par les différents services concernés par le foncier chez Valeco est progressive, avec de plus en plus d'utilisateurs qui font la transition depuis l'ancien outil.
         </p>
         <p>
-          Au-delà de la méthode, j'ai développé de nombreuses compétences liées au travail collaboratif : la communication constante avec l'équipe et le PO, la pratique des revues de code, l'apprentissage de la lecture et de la compréhension du code écrit par d'autres, ainsi que la gestion des conflits techniques (comme les merges). J'ai aussi appris l'importance de bien se concentrer sur le périmètre défini par les User Stories ("savoir ce restreindre à ce qu'on attend") et j'ai nettement amélioré ma maîtrise de la gestion de projet sur GitHub, notamment via une utilisation rigoureuse des branches pour chaque tâche spécifique.
+          L'équipe de développement, dont je fais toujours partie, se concentre en ce moment sur le traitement des retours utilisateurs (corriger des bugs ou faire des modifications mineures) afin de bien consolider ce qui existe déjà. Dans un second temps, la roadmap prévoit l'implémentation de nouvelles fonctionnalités importantes, comme la gestion fine des droits par utilisateur, parmi d'autres évolutions planifiées pour enrichir l'application .
         </p>
         <p>
-          Cette expérience contraste fortement avec mes projets précédents menés en autonomie. Le travail en équipe et le cadre Agile apportent une dynamique différente. De plus, le fait que le projet Act soit toujours en cours représente une opportunité précieuse : cela me permet un apprentissage continu sur des fonctionnalités souvent plus avancées que dans un projet à durée déterminée, ce qui constitue un vrai bonus pour mon alternance et ma montée en compétences globale.
+          La vision à long terme pour Act est claire:cet outil a vocation à devenir la plateforme centrale et unique pour l'ensemble de la gestion foncière au sein de Valeco. Le projet est donc loin d'être terminé et représente un investissement stratégique avec un potentiel d'évolution important pour l'entreprise .
+        </p>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>8 – CE QUE JE RETIENS : L'APPRENTISSAGE PAR L'ÉQUIPE ET L'AGILE</h2>
+        <p>
+          Ma participation au projеt Act a été une expérience particulièremеnt formatrice, notamment grâce à la découvertе et à l'application de la methodologie Agile au quotidien. J'ai énormément apprécié cette manière de procéder: avoir des tâches prédéfinies dans un cadre structuré (les sprints) et une vision claire de la direction du projet ,c'est un vrai plus. Ça m 'a appris à mieux ordonner mon travail pour pouvoir en rendre compte efficacement chaque jour lors des daily stand-ups, et à expliciter clairement mes avancées ou mes éventuels points de blocage.
+        </p>
+        <p>
+          Au delà de la méthode, j'ai développé de nombreuses compétences liées au travail collaboratif : la communication constante avec l'équipe et le PO , la pratique des revues de code (donner et recevoir du feedback), l'apprentissage de la lecture et de la compréhension du code écrit par d'autres (un exercice très utile  ! ), ainsi que la gestion des "conflits " techniques (comme les merges). J'ai aussi appris l'importance de bien se concentrer sur le périmètre défini par les User Stories ("savoir se restreindre à ce qu'on attend", comme on dit) et j'ai nettement amélioré ma maîtrise de la gestion de projet sur GitHub, notamment via une utilisation rigoureuse des branches pour chaque tâche spécifique .
+        </p>
+        <p>
+          Cette expérience contraste fortement avec mes projets précédents menés en autonomie. Le travail en équipe et le cadre Agile apportent une dynamique différente, très stimulante .De plus , le fait que le projet Act soit toujours en cours représente une opportunité précieuse : ça me permet un apprentissage continu sur des fonctionnalités souvent plus avancées que dans un projet à durée déterminée, ce qui constitue un vrai bonus pour mon alternance et ma montée en compétences globale.
         </p>
       </section>
 
