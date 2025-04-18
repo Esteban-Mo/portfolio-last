@@ -1,0 +1,109 @@
+/* Styles pour la page Parcours */
+
+.container {
+  max-width: 1100px; /* Plus large pour la timeline */
+  margin: 2rem auto;
+  padding: 2rem 1rem; /* Moins de padding vertical que les pages skills */
+  position: relative;
+  overflow: visible; /* Important pour les éléments de la timeline */
+}
+
+.mainTitle {
+  color: #e2e8f0; /* slate-200 */
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Styles spécifiques pour les éléments de la timeline */
+.verticalTimelineElement {
+  margin: 3em 0 !important; /* Ajouter un peu plus d'espace vertical */
+}
+
+.elementTitle {
+  font-size: 1.25rem !important; /* Taille standard pour les titres */
+  font-weight: 600 !important;
+  color: #f1f5f9; /* slate-100 */
+}
+
+.elementSubtitle {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: #94a3b8 !important; /* slate-400 */
+  margin-top: 0.25rem !important;
+}
+
+.elementLocation {
+  font-size: 0.9rem !important;
+  font-style: italic !important;
+  color: #64748b !important; /* slate-500 */
+  margin-top: 0.5rem !important;
+}
+
+.elementDescription {
+  margin-top: 1rem !important;
+  color: #cbd5e1 !important; /* slate-300 */
+  line-height: 1.6 !important;
+}
+
+.elementDescription p {
+  margin-bottom: 0.5rem !important;
+}
+
+.elementDescription ul {
+  list-style: disc;
+  padding-left: 1.5rem; /* Moins d'indentation */
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.elementDescription li {
+   margin-bottom: 0.25rem;
+}
+
+.skillsContainer {
+  margin-top: 1rem !important;
+  font-size: 0.85rem !important;
+  color: #94a3b8 !important; /* slate-400 */
+}
+
+.skillsContainer strong {
+  color: #cbd5e1 !important; /* slate-300 */
+}
+
+/* Style pour les liens de projet dans la description */
+.projectLink {
+  color: #60a5fa; /* blue-400 */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.projectLink:hover {
+  color: #93c5fd; /* blue-300 */
+}
+
+/* Style pour la date (optionnel, si on veut la rendre plus visible) */
+.dateText {
+  color: #94a3b8; /* slate-400 */
+}
+
+/* ajustements responsives si besoin */
+@media screen and (max-width: 1170px) {
+  .verticalTimelineElement {
+    /* Ajustements possibles pour écrans moyens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      padding: 2rem 0.5rem;
+  }
+  .mainTitle {
+      font-size: 2rem;
+  }
+  .verticalTimelineElement {
+      margin: 2em 0 !important;
+  }
+  /* Autres ajustements pour mobile */
+} 

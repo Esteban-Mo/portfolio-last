@@ -14,10 +14,12 @@
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
     "@types/lodash": "^4.17.16",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "lodash": "^4.17.21",
     "next": "15.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-vertical-timeline-component": "^3.5.3"
   },
   "devDependencies": {
     "@types/node": "^20",
