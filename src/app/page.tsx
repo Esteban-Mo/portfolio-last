@@ -81,7 +81,8 @@ const projectsData = [
     title: "Agence Walker",
     description: "Site web de gestion immobilière incluant la visualisation de biens sur une carte dynamique.",
     chips: ["React", "Next.js", "Prisma", "MongoDB", "TypeScript", "Leaflet"],
-    emoji: "🏠"
+    emoji: "🏠",
+    link: "/projects/agence-walker"
   },
   {
     title: "Module Foncier (Act)",
@@ -94,7 +95,8 @@ const projectsData = [
     title: "Domaine Georges Roumier",
     description: "Site vitrine pour un domaine viticole, présentant les vins et une carte dynamique des points de vente.",
     chips: ["React", "Next.js", "Prisma", "MongoDB", "TypeScript", "Leaflet"],
-    emoji: "🍇"
+    emoji: "🍇",
+    link: "/projects/domaine-roumier"
   }
 ];
 
