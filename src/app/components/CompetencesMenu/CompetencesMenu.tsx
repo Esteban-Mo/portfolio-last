@@ -1,74 +1,41 @@
-export default function CompetencesMenu() {
-    const competences = [
-        {
-            id: 'frameworks-libraries',
-            name: 'Framework & Librairies',
-            category: 'technique',
-            items: [
-                { id: 'react', name: 'React' },
-                { id: 'next', name: 'Next.js' },
-                { id: 'prisma', name: 'Prisma' }
-            ]
-        },
-        {
-            id: 'langages',
-            name: 'Langages de Programmation',
-            category: 'technique',
-            items: [
-                { id: 'typescript', name: 'TypeScript' },
-                { id: 'python', name: 'Python' }
-            ]
-        },
-        {
-            id: 'geo-systems',
-            name: 'Systèmes Géographiques',
-            category: 'technique',
-            items: [
-                { id: 'geoserver', name: 'Geoserver' },
-                { id: 'leaflet', name: 'Leaflet' }
-            ]
-        },
-        {
-            id: 'base-de-donnees',
-            name: 'Base de Données',
-            category: 'technique',
-            items: [
-                { id: 'postgresql', name: 'PostgreSQL' },
-                { id: 'mongodb', name: 'MongoDB' }
-            ]
-        },
-        {
-            id: 'competences-humaines',
-            name: 'Compétences Humaines',
-            category: 'humaine',
-            items: [
-                { id: 'communication', name: 'Communication' },
-                { id: 'leadership', name: 'Leadership' },
-                { id: 'adaptabilite', name: 'Adaptabilité' },
-                { id: 'resolution-de-problemes', name: 'Résolution de Problèmes' }
-            ]
-        }
-    ];
+'use client';
+import Link from 'next/link';
+import Divider from '@mui/material/Divider';
+import { skillsData, humanSkillsData } from '@/data/searchData';
 
+export default function CompetencesMenu() {
     const linkStyle = {
-        color: '#fff',
+        display: 'block',
+        color: '#e2e8f0',
         textDecoration: 'none',
-        padding: '0.25rem 0.5rem',
+        padding: '0.4rem 0.8rem',
         borderRadius: '4px',
-        transition: 'all 0.2s ease',
-        backgroundColor: 'transparent'
+        fontSize: '0.9rem',
+        transition: 'background-color 0.2s ease, color 0.2s ease',
+        backgroundColor: 'transparent',
+        whiteSpace: 'nowrap' as 'nowrap',
     };
 
     const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
         const target = e.currentTarget;
-        target.style.backgroundColor = '#333';
-        target.style.color = '#60A5FA';
+        target.style.backgroundColor = 'rgba(96, 165, 250, 0.2)';
+        target.style.color = '#90cdf4';
     };
 
     const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
         const target = e.currentTarget;
         target.style.backgroundColor = 'transparent';
-        target.style.color = '#fff';
+        target.style.color = '#e2e8f0';
+    };
+
+    const sectionTitleStyle: React.CSSProperties = {
+        color: '#90cdf4',
+        fontSize: '0.85rem',
+        fontWeight: '600',
+        textTransform: 'uppercase',
+        marginBottom: '0.75rem',
+        letterSpacing: '0.05em',
+        paddingLeft: '0.8rem'
     };
 
     return (
@@ -77,53 +44,51 @@ export default function CompetencesMenu() {
             top: '100%',
             left: '50%',
             transform: 'translateX(-50%)',
-            backgroundColor: '#1a1a1a',
+            backgroundColor: '#1f2937',
             borderRadius: '8px',
-            padding: '1rem',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            padding: '1rem 0.5rem',
+            boxShadow: '0 6px 12px rgba(0, 0, 0, 0.3)',
             zIndex: 1000,
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '1rem',
-            width: 'max-content',
-            maxWidth: '90vw'
+            display: 'flex',
+            gap: '1.5rem',
         }}>
-            <div style={{
-                gridColumn: '1 / -1',
-                borderBottom: '1px solid #333',
-                paddingBottom: '0.5rem',
-                marginBottom: '0.5rem',
-                color: '#60A5FA',
-                fontWeight: 'bold'
-            }}>
-                Compétences
+            <div>
+                <h4 style={sectionTitleStyle}>
+                    Techniques
+                </h4>
+                {skillsData.map((skill) => (
+                    <Link 
+                        key={skill.title}
+                        href={skill.link || '#'}
+                        passHref
+                        style={linkStyle}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                       {skill.title}
+                    </Link>
+                ))}
             </div>
-            {competences.map(category => (
-                <div key={category.id} style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '0.5rem'
-                }}>
-                    <div style={{
-                        color: '#60A5FA',
-                        fontWeight: 'bold',
-                        marginBottom: '0.5rem'
-                    }}>
-                        {category.name}
-                    </div>
-                    {category.items.map(item => (
-                        <a
-                            key={item.id}
-                            href={`/competences/${item.id}`}
-                            style={linkStyle}
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            {item.name}
-                        </a>
-                    ))}
-                </div>
-            ))}
+
+            <Divider orientation="vertical" flexItem sx={{ bgcolor: 'rgba(255, 255, 255, 0.1)' }} />
+
+            <div>
+                 <h4 style={sectionTitleStyle}>
+                    Humaines
+                </h4>
+                {humanSkillsData.map((skill) => (
+                     <Link 
+                        key={skill.title}
+                        href={skill.link || '#'}
+                        passHref
+                        style={linkStyle}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                       {skill.title}
+                    </Link>
+                ))}
+            </div>
         </div>
     );
 } 

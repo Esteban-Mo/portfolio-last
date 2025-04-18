@@ -12,6 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import SearchBar from '../SearchBar/SearchBar';
 import CompetencesMenu from '../CompetencesMenu/CompetencesMenu';
+import RealisationsMenu from '../RealisationsMenu/RealisationsMenu';
 import styles from './Header.module.css';
 import { usePathname } from 'next/navigation';
 
@@ -25,6 +26,7 @@ export default function Header() {
         return 'home';
     });
     const [showCompetencesMenu, setShowCompetencesMenu] = useState(false);
+    const [showRealisationsMenu, setShowRealisationsMenu] = useState(false);
 
     useEffect(() => {
         if (pathname === '/presentation') {
@@ -154,29 +156,44 @@ export default function Header() {
                 </a>
                 <div 
                     style={{ position: 'relative' }}
-                    onMouseEnter={() => setShowCompetencesMenu(true)}
-                    onMouseLeave={() => setShowCompetencesMenu(false)}
+                    onMouseEnter={() => {
+                        setShowCompetencesMenu(true);
+                        setHoveredLink('skills');
+                    }}
+                    onMouseLeave={() => {
+                        setShowCompetencesMenu(false);
+                        setHoveredLink(null);
+                    }}
                 >
                     <a 
                         onClick={() => scrollToSection(`skills`)}
                         className={styles.link}
                         style={{ color: getLinkColor(`skills`, `skills`), cursor: `pointer` }}
-                        onMouseEnter={() => setHoveredLink(`skills`)}
-                        onMouseLeave={() => setHoveredLink(null)}
                     >
                         <CodeIcon /> Compétences
                     </a>
                     {showCompetencesMenu && <CompetencesMenu />}
                 </div>
-                <a 
-                    onClick={() => scrollToSection(`projects`)}
-                    className={styles.link}
-                    style={{ color: getLinkColor(`projects`, `realisations`), cursor: `pointer` }}
-                    onMouseEnter={() => setHoveredLink(`realisations`)}
-                    onMouseLeave={() => setHoveredLink(null)}
+                <div 
+                    style={{ position: 'relative' }}
+                    onMouseEnter={() => {
+                        setShowRealisationsMenu(true);
+                        setHoveredLink('realisations');
+                    }}
+                    onMouseLeave={() => {
+                        setShowRealisationsMenu(false);
+                        setHoveredLink(null);
+                    }}
                 >
-                    <WorkIcon /> Réalisations
-                </a>
+                    <a 
+                        onClick={() => scrollToSection(`projects`)}
+                        className={styles.link}
+                        style={{ color: getLinkColor(`projects`, `realisations`), cursor: `pointer` }}
+                    >
+                        <WorkIcon /> Réalisations
+                    </a>
+                    {showRealisationsMenu && <RealisationsMenu />}
+                </div>
                 <a 
                     onClick={() => scrollToSection(`contact`)}
                     className={styles.link}
