@@ -59,4 +59,49 @@
 
 .list li {
   margin-bottom: 0.5rem;
+}
+
+.chipContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Spacing between chips */
+  margin-bottom: 2.5rem; /* Space below chips, before first section */
+}
+
+/* Styles UNIQUEMENT pour les chips de projet - Ajoutés */
+.associatedProjectsSection {
+  /* Optionnel: styles spécifiques si nécessaire */
+  /* On peut utiliser les styles .section par défaut ou ajouter ici */
+  margin-top: 3rem; /* Espace supplémentaire avant cette section */
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2); /* Séparateur léger */
+}
+
+.projectChipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem; /* Espace entre les chips */
+  margin-top: 1rem; /* Espace après le titre de section */
+}
+
+.chip.projectChip {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 16px; /* Plus arrondi */
+  background-color: #3b82f6; /* blue-500 */
+  color: #ffffff; /* Texte blanc */
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  cursor: pointer;
+  border: none; /* Assurer qu'il n'y a pas de bordure par défaut */
+}
+
+.chip.projectChip:hover {
+  background-color: #2563eb; /* blue-600 */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 } 

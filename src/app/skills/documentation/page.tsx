@@ -1,7 +1,13 @@
 import Chip from '@mui/material/Chip'; // Import Chip
 import styles from './page.module.css'; // Reuse the same CSS module structure
+import Link from 'next/link'; // Importer Link
 
 const pageChips = ["Notion", "Markdown"]; // Define chips for this page
+
+// Définir les projets associés à cette catégorie
+const associatedProjects = [
+  { name: 'Agence Walker', path: '/projects/agence-walker' },
+];
 
 export default function DocumentationSkillPage() {
   return (
@@ -84,6 +90,20 @@ export default function DocumentationSkillPage() {
         <p>
           Certaines documentations sont destinées à des profils techniques, d'autres à des profils métiers — je m'adapte aux deux. En tant que futur Tech Lead, je vois clairement la documentation comme un outil de transmission indispensable, que ce soit pour accompagner une équipe, préparer une passation, ou assurer la pérennité d'un projet.
         </p>
+      </section>
+
+      {/* Nouvelle section pour les projets associés */}
+      <section className={`${styles.section} ${styles.associatedProjectsSection}`}>
+        <h2 className={styles.sectionTitle}>Projets Associés</h2>
+        <div className={styles.projectChipsContainer}>
+          {associatedProjects.map((project) => (
+            <Link key={project.name} href={project.path} passHref>
+              <span className={`${styles.chip} ${styles.projectChip}`}>
+                {project.name}
+              </span>
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   );

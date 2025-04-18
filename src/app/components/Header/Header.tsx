@@ -15,6 +15,7 @@ import CompetencesMenu from '../CompetencesMenu/CompetencesMenu';
 import RealisationsMenu from '../RealisationsMenu/RealisationsMenu';
 import styles from './Header.module.css';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,6 +24,8 @@ export default function Header() {
     const [activeSection, setActiveSection] = useState(() => {
         if (pathname === '/presentation') return 'presentation';
         if (pathname === '/parcours') return 'parcours';
+        if (pathname.startsWith('/skills')) return 'skills';
+        if (pathname.startsWith('/projects')) return 'projects';
         return 'home';
     });
     const [showCompetencesMenu, setShowCompetencesMenu] = useState(false);
@@ -33,6 +36,10 @@ export default function Header() {
             setActiveSection('presentation');
         } else if (pathname === '/parcours') {
             setActiveSection('parcours');
+        } else if (pathname.startsWith('/skills')) {
+            setActiveSection('skills');
+        } else if (pathname.startsWith('/projects')) {
+            setActiveSection('projects');
         } else if (pathname === '/') {
             const handleScroll = () => {
                 const sections = [`home`, 'presentation-preview', `skills`, `projects`, `contact`];
@@ -55,12 +62,6 @@ export default function Header() {
 
                 if (finalActiveSectionId === 'presentation-preview') {
                     finalActiveSectionId = 'presentation';
-                }
-                if (finalActiveSectionId === 'skills') {
-                    finalActiveSectionId = 'skills';
-                }
-                if (finalActiveSectionId === 'projects') {
-                    finalActiveSectionId = 'projects';
                 }
                 
                 setActiveSection(prev => prev === finalActiveSectionId ? prev : finalActiveSectionId);
@@ -95,14 +96,16 @@ export default function Header() {
                 top: offsetPosition,
                 behavior: "smooth"
             });
+            setIsMenuOpen(false);
+            return true;
         } else {
             if (['home', 'presentation-preview', 'skills', 'projects', 'contact'].includes(targetElementId)) {
                 window.location.href = `/#${targetElementId}`;
             } else {
                 console.warn(`Element with ID '${targetElementId}' not found for scrolling.`);
             }
+            return false;
         }
-        setIsMenuOpen(false);
     };
 
     return (
@@ -127,16 +130,22 @@ export default function Header() {
 
             <nav className={styles.desktopNav}>
                 <SearchBar />
-                <a 
-                    onClick={() => scrollToSection(`home`)}
+                <Link 
+                    href="/#home"
+                    onClick={(e) => {
+                        if (pathname === '/') {
+                            e.preventDefault();
+                            scrollToSection('home');
+                        }
+                    }}
                     className={styles.link}
                     style={{ color: getLinkColor(`home`, `home`), cursor: `pointer` }}
                     onMouseEnter={() => setHoveredLink(`home`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <HomeIcon /> Accueil
-                </a>
-                <a 
+                </Link>
+                <Link 
                     href="/presentation"
                     className={styles.link}
                     style={{ color: getLinkColor(`presentation`, `presentation`), cursor: `pointer` }}
@@ -144,8 +153,8 @@ export default function Header() {
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <PersonIcon /> Présentation
-                </a>
-                <a 
+                </Link>
+                <Link 
                     href="/parcours"
                     className={styles.link}
                     style={{ color: getLinkColor(`parcours`, `parcours`), cursor: `pointer` }}
@@ -153,7 +162,7 @@ export default function Header() {
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <WorkHistoryIcon /> Parcours
-                </a>
+                </Link>
                 <div 
                     style={{ position: 'relative' }}
                     onMouseEnter={() => {
@@ -165,13 +174,21 @@ export default function Header() {
                         setHoveredLink(null);
                     }}
                 >
-                    <a 
-                        onClick={() => scrollToSection(`skills`)}
+                    <Link 
+                        href="/skills"
+                        onClick={(e) => {
+                            if (pathname === '/') {
+                                e.preventDefault();
+                                if (!scrollToSection('skills')) {
+                                    window.location.href = '/#skills';
+                                }
+                            }
+                        }}
                         className={styles.link}
                         style={{ color: getLinkColor(`skills`, `skills`), cursor: `pointer` }}
                     >
                         <CodeIcon /> Compétences
-                    </a>
+                    </Link>
                     {showCompetencesMenu && <CompetencesMenu />}
                 </div>
                 <div 
@@ -185,24 +202,36 @@ export default function Header() {
                         setHoveredLink(null);
                     }}
                 >
-                    <a 
-                        onClick={() => scrollToSection(`projects`)}
+                    <Link 
+                        href="/#projects"
+                        onClick={(e) => {
+                            if (pathname === '/') {
+                                e.preventDefault();
+                                scrollToSection('projects');
+                            }
+                        }}
                         className={styles.link}
                         style={{ color: getLinkColor(`projects`, `realisations`), cursor: `pointer` }}
                     >
                         <WorkIcon /> Réalisations
-                    </a>
+                    </Link>
                     {showRealisationsMenu && <RealisationsMenu />}
                 </div>
-                <a 
-                    onClick={() => scrollToSection(`contact`)}
+                <Link 
+                    href="/#contact"
+                    onClick={(e) => {
+                        if (pathname === '/') {
+                            e.preventDefault();
+                            scrollToSection('contact');
+                        }
+                    }}
                     className={styles.link}
                     style={{ color: getLinkColor(`contact`, `contact`), cursor: `pointer` }}
                     onMouseEnter={() => setHoveredLink(`contact`)}
                     onMouseLeave={() => setHoveredLink(null)}
                 >
                     <ContactMailIcon /> Contact
-                </a>
+                </Link>
             </nav>
 
             <button 
@@ -214,64 +243,70 @@ export default function Header() {
 
             <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
                 <SearchBar />
-                <a 
-                    onClick={() => scrollToSection(`home`)}
+                <Link 
+                    href="/#home"
+                    onClick={(e) => {
+                        if (pathname === '/') { e.preventDefault(); scrollToSection('home'); }
+                        setIsMenuOpen(false);
+                    }}
                     className={`${styles.link} ${styles.mobileLink}`}
                     style={{ color: getLinkColor(`home`, `home`), cursor: `pointer` }}
-                    onMouseEnter={() => setHoveredLink(`home`)}
-                    onMouseLeave={() => setHoveredLink(null)}
                 >
                     <HomeIcon /> Accueil
-                </a>
-                <a 
+                </Link>
+                <Link 
                     href="/presentation"
+                    onClick={() => setIsMenuOpen(false)}
                     className={`${styles.link} ${styles.mobileLink}`}
                     style={{ color: getLinkColor(`presentation`, `presentation`), cursor: `pointer` }}
-                    onMouseEnter={() => setHoveredLink(`presentation`)}
-                    onMouseLeave={() => setHoveredLink(null)}
                 >
                     <PersonIcon /> Présentation
-                </a>
-                <a 
+                </Link>
+                <Link 
                     href="/parcours"
+                    onClick={() => setIsMenuOpen(false)}
                     className={`${styles.link} ${styles.mobileLink}`}
                     style={{ color: getLinkColor(`parcours`, `parcours`), cursor: `pointer` }}
-                    onMouseEnter={() => setHoveredLink(`parcours`)}
-                    onMouseLeave={() => setHoveredLink(null)}
                 >
                     <WorkHistoryIcon /> Parcours
-                </a>
+                </Link>
                 <div 
                     style={{ position: 'relative' }}
                 >
-                    <a 
-                        onClick={() => scrollToSection(`skills`)}
+                    <Link 
+                        href="/skills"
+                        onClick={(e) => {
+                            if (pathname === '/') { e.preventDefault(); scrollToSection('skills'); }
+                            setIsMenuOpen(false);
+                        }}
                         className={`${styles.link} ${styles.mobileLink}`}
                         style={{ color: getLinkColor(`skills`, `skills`), cursor: `pointer` }}
-                        onMouseEnter={() => setHoveredLink(`skills`)}
-                        onMouseLeave={() => setHoveredLink(null)}
                     >
                         <CodeIcon /> Compétences
-                    </a>
+                    </Link>
                 </div>
-                <a 
-                    onClick={() => scrollToSection(`projects`)}
+                <Link 
+                    href="/#projects"
+                    onClick={(e) => {
+                        if (pathname === '/') { e.preventDefault(); scrollToSection('projects'); }
+                        setIsMenuOpen(false);
+                    }}
                     className={`${styles.link} ${styles.mobileLink}`}
                     style={{ color: getLinkColor(`projects`, `realisations`), cursor: `pointer` }}
-                    onMouseEnter={() => setHoveredLink(`realisations`)}
-                    onMouseLeave={() => setHoveredLink(null)}
                 >
                     <WorkIcon /> Réalisations
-                </a>
-                <a 
-                    onClick={() => scrollToSection(`contact`)}
+                </Link>
+                <Link 
+                    href="/#contact"
+                    onClick={(e) => {
+                        if (pathname === '/') { e.preventDefault(); scrollToSection('contact'); }
+                        setIsMenuOpen(false);
+                    }}
                     className={`${styles.link} ${styles.mobileLink}`}
                     style={{ color: getLinkColor(`contact`, `contact`), cursor: `pointer` }}
-                    onMouseEnter={() => setHoveredLink(`contact`)}
-                    onMouseLeave={() => setHoveredLink(null)}
                 >
                     <ContactMailIcon /> Contact
-                </a>
+                </Link>
             </div>
         </header>
     );

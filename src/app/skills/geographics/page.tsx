@@ -1,7 +1,15 @@
 import Chip from '@mui/material/Chip'; // Import Chip
 import styles from './page.module.css'; // Reuse the same CSS module structure
+import Link from 'next/link'; // Importer Link
 
 const pageChips = ["Leaflet", "GeoServer"]; // Define chips for this page
+
+// Définir les projets associés à cette catégorie
+const associatedProjects = [
+  { name: 'Agence Walker', path: '/projects/agence-walker' },
+  { name: 'Domaine Roumier', path: '/projects/domaine-roumier' },
+  { name: 'Atlas', path: '/projects/atlas' },
+];
 
 export default function GeographicsSkillPage() {
   return (
@@ -99,6 +107,21 @@ export default function GeographicsSkillPage() {
           Aujourd'​hui​, je ne travaille plus sur de projets de cartographie​, mais je garde cette compétence en tête​​, prête à être réactivée. Je considère que c​'est un complément utile à mon profil fullstack​​, surtout dans des contextes où la visualisation géospatiale apporte une vraie valeur ajoutée au pro​jet.
         </p>
       </section>
+
+       {/* Nouvelle section pour les projets associés */}
+      <section className={`${styles.section} ${styles.associatedProjectsSection}`}>
+        <h2 className={styles.sectionTitle}>Projets Associés</h2>
+        <div className={styles.projectChipsContainer}>
+          {associatedProjects.map((project) => (
+            <Link key={project.name} href={project.path} passHref>
+              <span className={`${styles.chip} ${styles.projectChip}`}>
+                {project.name}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 } 

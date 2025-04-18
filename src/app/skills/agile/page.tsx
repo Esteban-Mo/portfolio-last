@@ -1,7 +1,13 @@
 import Chip from '@mui/material/Chip'; // Import Chip
 import styles from './page.module.css'; // Reuse the same CSS module structure
+import Link from 'next/link'; // Importer Link
 
 const pageChips = ["Scrum", "Kanban"]; // Define chips for this page
+
+// Définir les projets associés à cette catégorie
+const associatedProjects = [
+  { name: 'Module Foncier', path: '/projects/module-foncier' },
+];
 
 export default function AgileSkillPage() {
   return (
@@ -86,6 +92,20 @@ export default function AgileSkillPage() {
         <p>
           Mon objectif à moyen terme serait de pouvoir prendre la main sur un sprint complet​, ou même d'animer une rétrospective d'équipe, pour renforcer mes compétences en coordination et gestion de projet dans un cadre agile​.
         </p>
+      </section>
+
+      {/* Nouvelle section pour les projets associés */}
+      <section className={`${styles.section} ${styles.associatedProjectsSection}`}>
+        <h2 className={styles.sectionTitle}>Projets Associés</h2>
+        <div className={styles.projectChipsContainer}>
+          {associatedProjects.map((project) => (
+            <Link key={project.name} href={project.path} passHref>
+              <span className={`${styles.chip} ${styles.projectChip}`}>
+                {project.name}
+              </span>
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   );

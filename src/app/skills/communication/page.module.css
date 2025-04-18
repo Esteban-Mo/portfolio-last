@@ -16,7 +16,7 @@
   transform: translate(-50%, -50%);
   font-size: 25rem; /* Very large font size */
   color: #fff; /* Base color for emoji */
-  opacity: 0.2; /* Very subtle opacity */
+  opacity: 0.05; /* Very subtle opacity */
   z-index: -1; /* Behind the content */
   pointer-events: none; /* Non-interactive */
   user-select: none; /* Prevent text selection */
@@ -59,4 +59,41 @@
 
 .list li {
   margin-bottom: 0.5rem;
+}
+
+.chipContainer {
+  /* Si besoin d'afficher des chips MUI spécifiques à cette compétence */
+}
+
+.associatedProjectsSection {
+  margin-top: 3rem; 
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2); 
+}
+
+.projectChipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem; 
+  margin-top: 1rem; 
+}
+
+.chip.projectChip {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 16px; 
+  background-color: #3b82f6; 
+  color: #ffffff; 
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  cursor: pointer;
+  border: none; 
+}
+
+.chip.projectChip:hover {
+  background-color: #2563eb; 
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 } 

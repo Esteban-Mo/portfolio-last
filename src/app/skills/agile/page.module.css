@@ -59,4 +59,47 @@
 
 .list li {
   margin-bottom: 0.5rem;
+}
+
+.chipContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem; 
+  margin-bottom: 2.5rem; 
+}
+
+/* Styles UNIQUEMENT pour les chips de projet - Ajoutés */
+.associatedProjectsSection {
+  margin-top: 3rem; 
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2); 
+}
+
+.projectChipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem; 
+  margin-top: 1rem; 
+}
+
+.chip.projectChip {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 16px; 
+  background-color: #3b82f6; 
+  color: #ffffff; 
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  cursor: pointer;
+  border: none; 
+}
+
+.chip.projectChip:hover {
+  background-color: #2563eb; 
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 } 

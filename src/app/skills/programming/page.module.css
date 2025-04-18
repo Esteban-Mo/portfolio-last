@@ -1,8 +1,8 @@
 .container {
   max-width: 900px; /* Content width */
   margin: 0 auto; /* Center content */
-  padding: 3rem 1rem 6rem; /* Top, horizontal, bottom padding */
-  color: #e2e8f0; /* Default text color (slate-200) */
+  padding: 3rem 1rem 6rem;
+  color: #e2e8f0;
   line-height: 1.7;
   position: relative; /* Needed for absolute positioning of child */
   overflow: hidden; /* Hide potential overflow from large emoji */
@@ -14,16 +14,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 25rem; /* Very large font size */
-  color: #fff; /* Base color for emoji */
-  opacity: 0.05; /* Very subtle opacity */
-  z-index: -1; /* Behind the content */
-  pointer-events: none; /* Non-interactive */
-  user-select: none; /* Prevent text selection */
+  font-size: 25rem;
+  color: #fff;
+  opacity: 0.05;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
 }
 
 .mainTitle {
-  font-size: clamp(2.5rem, 6vw, 3.5rem); /* Responsive title size */
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
   color: #fff;
   text-align: center;
   margin-bottom: 3rem;
@@ -40,7 +40,7 @@
   font-weight: 600;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #60A5FA; /* Underline like homepage titles */
+  border-bottom: 2px solid #60A5FA;
   display: inline-block; /* Make underline fit content */
 }
 
@@ -59,4 +59,48 @@
 
 .list li {
   margin-bottom: 0.5rem;
+}
+
+/* Styles for MUI Chips */
+.chipContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Styles UNIQUEMENT for the project chips - Added */
+.associatedProjectsSection {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.projectChipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.chip.projectChip {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 16px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.chip.projectChip:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 } 

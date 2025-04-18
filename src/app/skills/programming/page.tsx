@@ -1,7 +1,17 @@
 import Chip from '@mui/material/Chip'; // Import Chip
 import styles from './page.module.css'; // Reuse the same CSS module structure
+import Link from 'next/link'; // Importer Link
 
 const pageChips = ["TypeScript", "Python"]; // Define chips for this page
+
+// Définir les projets associés à cette catégorie
+const associatedProjects = [
+  { name: 'Agence Walker', path: '/projects/agence-walker' },
+  { name: 'BDD Turbine', path: '/projects/bdd-turbine' },
+  { name: 'Domaine Roumier', path: '/projects/domaine-roumier' },
+  { name: 'Module Foncier', path: '/projects/module-foncier' },
+  { name: 'Atlas', path: '/projects/atlas' },
+];
 
 export default function ProgrammingSkillPage() {
   return (
@@ -86,6 +96,20 @@ export default function ProgrammingSkillPage() {
         <p>
           En tant que futur Tech Lead​, la maîtrise de ces deux langages me permettra de choisir les bons outils selon les besoins, d'accompagner des développeurs juniors sur leur montée en compétences, et de guarantir un haut niveau de qualité sur les projets que je pilote — quel que soit le langage utilisé​.
         </p>
+      </section>
+
+      {/* Nouvelle section pour les projets associés */}
+      <section className={`${styles.section} ${styles.associatedProjectsSection}`}>
+        <h2 className={styles.sectionTitle}>Projets Associés</h2>
+        <div className={styles.projectChipsContainer}>
+          {associatedProjects.map((project) => (
+            <Link key={project.name} href={project.path} passHref>
+              <span className={`${styles.chip} ${styles.projectChip}`}>
+                {project.name}
+              </span>
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   );

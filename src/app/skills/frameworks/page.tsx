@@ -1,7 +1,17 @@
 import Chip from '@mui/material/Chip'; // Import Chip
 import styles from './page.module.css'; // Reuse the same CSS module structure
+import Link from 'next/link'; // Importer Link
 
 const pageChips = ["React", "Next.js", "Prisma"]; // Define chips for this page
+
+// Définir les projets associés à cette catégorie
+const associatedProjects = [
+  { name: 'Agence Walker', path: '/projects/agence-walker' },
+  { name: 'BDD Turbine', path: '/projects/bdd-turbine' },
+  { name: 'Domaine Roumier', path: '/projects/domaine-roumier' },
+  { name: 'Module Foncier', path: '/projects/module-foncier' },
+  { name: 'Atlas', path: '/projects/atlas' },
+];
 
 export default function FrameworksSkillPage() {
   return (
@@ -87,6 +97,21 @@ export default function FrameworksSkillPage() {
           Me​s prio​rités actu​elles son​t clai​res : archit​ecture propre​​, lisibilité du code​​, et maintenabilité à long terme​. Ces axes sont essentiels pour mon objectif professionnel de devenir tech lead​, car ils me permettront à terme d​'acco​mp​a​gner une équipe sur des projets solides, cohérents et évolutifs​.
         </p>
       </section>
+
+      {/* Nouvelle section pour les projets associés */}
+      <section className={`${styles.section} ${styles.associatedProjectsSection}`}>
+        <h2 className={styles.sectionTitle}>Projets Associés</h2>
+        <div className={styles.projectChipsContainer}>
+          {associatedProjects.map((project) => (
+            <Link key={project.name} href={project.path} passHref>
+              <span className={`${styles.chip} ${styles.projectChip}`}>
+                {project.name}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 } 
