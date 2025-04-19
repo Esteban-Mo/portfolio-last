@@ -133,10 +133,8 @@ export default function Header() {
                 <Link 
                     href="/#home"
                     onClick={(e) => {
-                        if (pathname === '/') {
-                            e.preventDefault();
-                            scrollToSection('home');
-                        }
+                        e.preventDefault();
+                        scrollToSection('home');
                     }}
                     className={styles.link}
                     style={{ color: getLinkColor(`home`, `home`), cursor: `pointer` }}
@@ -175,14 +173,10 @@ export default function Header() {
                     }}
                 >
                     <Link 
-                        href="/skills"
+                        href="/#skills"
                         onClick={(e) => {
-                            if (pathname === '/') {
-                                e.preventDefault();
-                                if (!scrollToSection('skills')) {
-                                    window.location.href = '/#skills';
-                                }
-                            }
+                            e.preventDefault();
+                            scrollToSection('skills');
                         }}
                         className={styles.link}
                         style={{ color: getLinkColor(`skills`, `skills`), cursor: `pointer` }}
@@ -195,7 +189,7 @@ export default function Header() {
                     style={{ position: 'relative' }}
                     onMouseEnter={() => {
                         setShowRealisationsMenu(true);
-                        setHoveredLink('realisations');
+                        setHoveredLink('projects');
                     }}
                     onMouseLeave={() => {
                         setShowRealisationsMenu(false);
@@ -205,13 +199,11 @@ export default function Header() {
                     <Link 
                         href="/#projects"
                         onClick={(e) => {
-                            if (pathname === '/') {
-                                e.preventDefault();
-                                scrollToSection('projects');
-                            }
+                            e.preventDefault();
+                            scrollToSection('projects');
                         }}
                         className={styles.link}
-                        style={{ color: getLinkColor(`projects`, `realisations`), cursor: `pointer` }}
+                        style={{ color: getLinkColor(`projects`, `projects`), cursor: `pointer` }}
                     >
                         <WorkIcon /> Réalisations
                     </Link>
@@ -220,10 +212,8 @@ export default function Header() {
                 <Link 
                     href="/#contact"
                     onClick={(e) => {
-                        if (pathname === '/') {
-                            e.preventDefault();
-                            scrollToSection('contact');
-                        }
+                        e.preventDefault();
+                        scrollToSection('contact');
                     }}
                     className={styles.link}
                     style={{ color: getLinkColor(`contact`, `contact`), cursor: `pointer` }}
@@ -246,7 +236,8 @@ export default function Header() {
                 <Link 
                     href="/#home"
                     onClick={(e) => {
-                        if (pathname === '/') { e.preventDefault(); scrollToSection('home'); }
+                        e.preventDefault();
+                        scrollToSection('home');
                         setIsMenuOpen(false);
                     }}
                     className={`${styles.link} ${styles.mobileLink}`}
@@ -270,36 +261,35 @@ export default function Header() {
                 >
                     <WorkHistoryIcon /> Parcours
                 </Link>
-                <div 
-                    style={{ position: 'relative' }}
-                >
-                    <Link 
-                        href="/skills"
-                        onClick={(e) => {
-                            if (pathname === '/') { e.preventDefault(); scrollToSection('skills'); }
-                            setIsMenuOpen(false);
-                        }}
-                        className={`${styles.link} ${styles.mobileLink}`}
-                        style={{ color: getLinkColor(`skills`, `skills`), cursor: `pointer` }}
-                    >
-                        <CodeIcon /> Compétences
-                    </Link>
-                </div>
                 <Link 
-                    href="/#projects"
+                    href="/#skills"
                     onClick={(e) => {
-                        if (pathname === '/') { e.preventDefault(); scrollToSection('projects'); }
+                        e.preventDefault();
+                        scrollToSection('skills');
                         setIsMenuOpen(false);
                     }}
                     className={`${styles.link} ${styles.mobileLink}`}
-                    style={{ color: getLinkColor(`projects`, `realisations`), cursor: `pointer` }}
+                    style={{ color: getLinkColor(`skills`, `skills`), cursor: `pointer` }}
+                >
+                    <CodeIcon /> Compétences
+                </Link>
+                <Link 
+                    href="/#projects"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('projects');
+                        setIsMenuOpen(false);
+                    }}
+                    className={`${styles.link} ${styles.mobileLink}`}
+                    style={{ color: getLinkColor(`projects`, `projects`), cursor: `pointer` }}
                 >
                     <WorkIcon /> Réalisations
                 </Link>
                 <Link 
                     href="/#contact"
                     onClick={(e) => {
-                        if (pathname === '/') { e.preventDefault(); scrollToSection('contact'); }
+                        e.preventDefault();
+                        scrollToSection('contact');
                         setIsMenuOpen(false);
                     }}
                     className={`${styles.link} ${styles.mobileLink}`}
