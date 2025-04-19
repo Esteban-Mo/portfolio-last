@@ -106,4 +106,72 @@
       margin: 2em 0 !important;
   }
   /* Autres ajustements pour mobile */
-} 
+}
+
+/* Ajoutez ou adaptez ces styles dans votre fichier CSS */
+
+.skillsChipContainer {
+  margin-top: 0.8rem;
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* gap: 0.5rem; */
+}
+
+/* Optional: Style for the "Compétences :" label if you re-add it */
+.skillsChipLabel {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #cbd5e1; /* slate-300 */
+  font-size: 0.9em;
+}
+
+/* Base style for all skill indicators */
+.chip {
+  display: inline-block; /* Permet aux chips de se placer côte à côte */
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px; /* Rounded corners */
+  font-size: 0.75rem; /* Smaller font size */
+  margin: 0.2rem; /* Spacing between chips */
+  background-color: rgba(100, 116, 139, 0.2); /* slate-500 with alpha */
+  color: #e2e8f0; /* slate-200 */
+  border: 1px solid rgba(148, 163, 184, 0.3); /* slate-400 with alpha */
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  text-decoration: none; /* Remove underline from Link */
+  cursor: default; /* Default cursor for non-clickable */
+}
+
+/* Style for clickable skill chips */
+.skillChip {
+  cursor: pointer; /* Indicate interactivity */
+}
+
+.skillChip:hover {
+  background-color: rgba(96, 165, 250, 0.2); /* blue-400 with alpha on hover */
+  border-color: rgba(96, 165, 250, 0.5); /* blue-400 border on hover */
+  color: #90cdf4; /* light blue text on hover */
+}
+
+/* Style for non-clickable chips (optional differentiation) */
+.nonClickableChip {
+  cursor: not-allowed; /* Indicate it's not clickable */
+  opacity: 0.7; /* Slightly faded */
+}
+
+.externalLink {
+  color: #60a5fa; /* blue-400 */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.externalLink:hover {
+  color: #93c5fd; /* blue-300 */
+  text-decoration: underline;
+}
+
+/* Optional: Add an icon for external links */
+/* .externalLink::after {
+  content: ' ↗';
+  font-size: 0.8em;
+  display: inline-block;
+  margin-left: 2px;
+} */ 

@@ -5,6 +5,8 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import styles from './page.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
+import { skillsData, humanSkillsData } from '@/data/searchData'; // Import skill data
 
 // Importer les icônes MUI
 import WorkIcon from '@mui/icons-material/Work';
@@ -20,57 +22,58 @@ const volunteerColor = '#f59e0b'; // Amber-500 (doré)
 const defaultColor = '#94a3b8'; // Slate-400 (gris un peu plus clair)
 // --- Fin des nouvelles couleurs ---
 
-// Définition de l'interface pour un événement de la timeline
+// Updated interface with optional logoUrl
 interface TimelineEvent {
   date: string;
-  icon: React.ReactElement;
+  icon?: React.ReactElement;
   iconStyle: React.CSSProperties;
   title: string;
   subtitle: string;
   location: string;
   description: string | React.ReactElement;
-  skills?: string[]; // Marquer comme optionnel car pas toujours présent
+  skills?: string[];
   isEducation?: boolean;
   isVolunteer?: boolean;
+  logoUrl?: string;
 }
 
-// Structure des données du parcours
+// Updated data structure with logo URLs and CONSISTENT white background for logos
 const timelineData: TimelineEvent[] = [
   {
     date: "2010 - 2014",
-    icon: <AccountBalanceIcon />,
-    iconStyle: { background: defaultColor, color: '#fff' },
+    iconStyle: { background: '#fff', color: defaultColor, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' },
     title: "Commercial de détail",
-    subtitle: "GiFi (CDI)",
+    subtitle: "GiFi",
     location: "L'Arbresle, Auvergne-Rhône-Alpes, France",
     description: "Gestion des stocks, vente, gestion du stockage et prévisions.",
+    logoUrl: "/images/gifi.png"
   },
   {
     date: "2015 (< 1 an)",
-    icon: <WorkIcon />,
-    iconStyle: { background: defaultColor, color: '#fff' },
+    iconStyle: { background: '#fff', color: defaultColor, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' },
     title: "Agent de sécurité privé",
-    subtitle: "ONET Sécurité (CDD)",
+    subtitle: "ONET Sécurité",
     location: "Lyon, Auvergne-Rhône-Alpes, France",
-    description: "Missions de sécurité privée."
+    description: "Missions de sécurité privée.",
+    logoUrl: "/images/Onet.png"
   },
    {
     date: "2015 - 2018",
-    icon: <WorkIcon />,
-    iconStyle: { background: defaultColor, color: '#fff' },
+    iconStyle: { background: '#fff', color: defaultColor, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' },
     title: "Intérimaire",
     subtitle: "Manpower",
     location: "L'Arbresle, Auvergne-Rhône-Alpes, France",
-    description: "Diverses missions en intérim."
+    description: "Diverses missions en intérim.",
+    logoUrl: "/images/manpower.png"
   },
   {
     date: "2018 - 2019",
-    icon: <AccountBalanceIcon />,
-    iconStyle: { background: defaultColor, color: '#fff' },
+    iconStyle: { background: '#fff', color: defaultColor, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' },
     title: "Responsable stocks",
-    subtitle: "Strand cosmétic (Intérimaire)",
+    subtitle: "Strand cosmétic",
     location: "Lentilly, Auvergne-Rhône-Alpes, France",
     description: "Gestion des stocks et application de la méthode CPFR (Gestion collaborative de la planification, de la prévision et des réapprovisionnements).",
+    logoUrl: "/images/strand.png"
   },
   {
     date: "Sept. 2020 - Aujourd'hui",
@@ -79,13 +82,19 @@ const timelineData: TimelineEvent[] = [
     title: "Étudiant Ingénieur (Logiciels)",
     subtitle: "Groupe AEN",
     location: "Nîmes, Occitanie, France",
-    description: "Formation d'ingénieur spécialisée dans la conception et le développement de logiciels.",
+    description: (
+      <>
+        Formation d'ingénieur spécialisée dans la conception et le développement de logiciels au{' '}
+        <a href="https://www.esiea.fr/" target="_blank" rel="noopener noreferrer" className={styles.externalLink}>
+          Groupe ESIEA
+        </a>.
+      </>
+    ),
     isEducation: true
   },
   {
     date: "Mars 2021 - Juil. 2021",
-    icon: <CodeIcon />,
-    iconStyle: { background: workColor, color: '#fff' },
+    iconStyle: { background: '#fff', color: defaultColor, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' },
     title: "Développeur Full Stack (Indépendant)",
     subtitle: "Axians",
     location: "Nîmes, Occitanie, France",
@@ -99,7 +108,8 @@ const timelineData: TimelineEvent[] = [
         </ul>
       </>
     ),
-    skills: ['PostgreSQL', 'HTML5', 'PHP', 'CSS'] 
+    skills: ['PostgreSQL', 'HTML5', 'PHP', 'CSS'],
+    logoUrl: "/images/axians.png"
   },
     {
     date: "Sept. 2021 - Mars 2022",
@@ -123,8 +133,7 @@ const timelineData: TimelineEvent[] = [
   },
   {
     date: "Déc. 2021 - Fév. 2022",
-    icon: <CodeIcon />,
-    iconStyle: { background: workColor, color: '#fff' },
+    iconStyle: { background: '#fff', color: defaultColor, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' },
     title: "Développeur Full Stack (Freelance)",
     subtitle: "Domaine George Roumier",
     location: "Nîmes, Occitanie, France (Remote)",
@@ -134,12 +143,12 @@ const timelineData: TimelineEvent[] = [
         <br /> Voir le projet : <Link href="/projects/domaine-roumier" className={styles.projectLink}>Domaine Roumier</Link>
       </>
     ),
-    skills: ['TypeScript', 'Scss', 'Linux', 'MongoDB', 'AngularJS', 'Déploiement', 'Node.js']
+    skills: ['TypeScript', 'Scss', 'Linux', 'MongoDB', 'AngularJS', 'Déploiement', 'Node.js'],
+    logoUrl: "/images/valeco.png"
   },
    {
     date: "Mars 2022 - Juil. 2022",
-    icon: <CodeIcon />,
-    iconStyle: { background: workColor, color: '#fff' },
+    iconStyle: { background: '#fff', color: defaultColor, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' },
     title: "Développement Web et API (Indépendant)",
     subtitle: "Yelloh Village - Europe Plein Air SAS",
     location: "Aigues-Mortes, Occitanie, France",
@@ -153,7 +162,8 @@ const timelineData: TimelineEvent[] = [
         </ul>
       </>
     ),
-    skills: ['TypeScript', 'Scss', 'MySQL', 'AngularJS', 'Java']
+    skills: ['TypeScript', 'Scss', 'MySQL', 'AngularJS', 'Java'],
+    logoUrl: "/images/yelloh.png"
   },
   {
     date: "Mars 2022 - Juil. 2022",
@@ -177,9 +187,9 @@ const timelineData: TimelineEvent[] = [
     isVolunteer: true
   },
   {
-    date: "Mi-2024 (Freelance)", // Date approximative ajoutée
+    date: "Mi-2024 (Freelance)",
     icon: <CodeIcon />,
-    iconStyle: { background: workColor, color: '#fff' }, // Utilise la nouvelle couleur travail
+    iconStyle: { background: workColor, color: '#fff' },
     title: "Développeur Web Freelance",
     subtitle: "Serveur GTA V Roleplay",
     location: "Remote",
@@ -193,8 +203,7 @@ const timelineData: TimelineEvent[] = [
   },
   {
     date: "Mars 2023 - Aujourd'hui",
-    icon: <CodeIcon />,
-    iconStyle: { background: workColor, color: '#fff' }, // Utilise la nouvelle couleur travail
+    iconStyle: { background: '#fff', color: defaultColor, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' },
     title: "Ingénieur Conception Logiciels (Alternance)",
     subtitle: "Valeco",
     location: "Montpellier, Occitanie, France (Hybride)",
@@ -209,29 +218,102 @@ const timelineData: TimelineEvent[] = [
         </ul>
       </>
     ),
-    skills: ['PostgreSQL', 'TypeScript', 'React.js', 'Next.js', 'Prisma']
+    skills: ['PostgreSQL', 'TypeScript', 'React.js', 'Next.js', 'Prisma'],
+    logoUrl: "/images/valeco.png"
   },
 ];
+
+// Create a map for skill names to paths (CORRECTED)
+const skillPathMap = new Map<string, string>();
+
+// Process Technical Skills (with chips)
+skillsData.forEach(skill => {
+  if (skill.link && skill.title) {
+    skillPathMap.set(skill.title.toLowerCase(), skill.link); // Map the main category title
+
+    // Add specific technologies from 'chips'
+    if (skill.chips) {
+      // Map specific technologies based on the category title
+      if (skill.title === "Framework & Librairies") {
+          ["React", "Next.js", "Prisma", "Material UI", "AngularJS", "Node.js", "Scss"].forEach(chip => skillPathMap.set(chip.toLowerCase(), skill.link));
+      }
+      if (skill.title === "Langages de Programmation") {
+          ["TypeScript", "Python", "PHP", "C#", "Java", "HTML5", "XAML", "WPF"].forEach(chip => skillPathMap.set(chip.toLowerCase(), skill.link));
+      }
+       if (skill.title === "Systèmes Géographiques") {
+          ["Leaflet", "GeoServer"].forEach(chip => skillPathMap.set(chip.toLowerCase(), skill.link));
+      }
+      if (skill.title === "Base de Données") {
+          ["PostgreSQL", "MongoDB", "MySQL"].forEach(chip => skillPathMap.set(chip.toLowerCase(), skill.link));
+      }
+      // Potentially map other chips if needed (e.g., from Documentation)
+      if (skill.title === "Documentation") {
+          ["Notion", "Markdown"].forEach(chip => skillPathMap.set(chip.toLowerCase(), skill.link));
+      }
+    }
+  }
+});
+
+// Process Human Skills (no chips)
+humanSkillsData.forEach(skill => {
+  if (skill.link && skill.title) {
+    skillPathMap.set(skill.title.toLowerCase(), skill.link);
+    // Add variations if needed for human skills found in timelineData
+    if (skill.title === "Autonomie") {
+        skillPathMap.set("autonomie & adaptabilité", skill.link);
+    }
+    if (skill.title === "Communication") {
+        skillPathMap.set("communication client", skill.link);
+        skillPathMap.set("communication stratégique", skill.link); // Added from volunteer experience
+    }
+    if (skill.title === "Organisation") {
+        skillPathMap.set("gestion de projet", skill.link);
+    }
+     if (skill.title === "Méthode Agile") {
+        skillPathMap.set("méthodes agiles", skill.link);
+        skillPathMap.set("scrum master", skill.link);
+    }
+    // Map other specific human skills from timeline if necessary
+    skillPathMap.set("collecte de fonds", "/skills/organization"); // Example mapping
+    skillPathMap.set("gestion budgétaire", "/skills/organization"); // Example mapping
+    skillPathMap.set("sensibilisation environnement", "/skills/communication"); // Example mapping
+  }
+});
+
+// Add any remaining skills from timelineData not covered above
+skillPathMap.set("linux", "/skills/programming"); // Or create a dedicated "OS/Tools" skill page
+skillPathMap.set("déploiement", "/skills/programming"); // Or dedicated DevOps/Deployment page
 
 export default function ParcoursPage() {
   return (
     <div className={styles.container}>
       <h1 className={styles.mainTitle}>Mon Parcours Professionnel</h1>
-      <VerticalTimeline lineColor={workColor}> 
+      <VerticalTimeline lineColor={workColor}>
         {timelineData.slice().reverse().map((item, index) => (
           <VerticalTimelineElement
             key={index}
-            className={styles.verticalTimelineElement} 
-            contentStyle={{ 
-                background: 'rgba(51, 65, 85, 0.7)', 
-                color: '#e2e8f0', 
-                boxShadow: `0 3px 0 ${item.iconStyle.background || defaultColor}` 
-             }} 
-            contentArrowStyle={{ borderRight: '7px solid rgba(51, 65, 85, 0.7)' }} 
+            className={styles.verticalTimelineElement}
+            contentStyle={{
+                background: 'rgba(51, 65, 85, 0.7)',
+                color: '#e2e8f0',
+                boxShadow: `0 3px 0 ${item.iconStyle.background || defaultColor}`
+             }}
+            contentArrowStyle={{ borderRight: '7px solid rgba(51, 65, 85, 0.7)' }}
             date={item.date}
-            dateClassName={styles.dateText} 
+            dateClassName={styles.dateText}
             iconStyle={item.iconStyle}
-            icon={item.icon}
+            icon={item.logoUrl ? (
+              <div className={styles.logoContainer}>
+                <Image
+                  src={item.logoUrl}
+                  alt={`${item.subtitle} logo`}
+                  fill
+                  style={{ objectFit: 'contain', padding: '5px' }}
+                />
+              </div>
+            ) : (
+              item.icon
+            )}
           >
             <h3 className={`vertical-timeline-element-title ${styles.elementTitle}`}>{item.title}</h3>
             <h4 className={`vertical-timeline-element-subtitle ${styles.elementSubtitle}`}>{item.subtitle}</h4>
@@ -240,8 +322,26 @@ export default function ParcoursPage() {
               {typeof item.description === 'string' ? <p>{item.description}</p> : item.description}
             </div>
             {item.skills && item.skills.length > 0 && (
-              <div className={styles.skillsContainer}>
-                <strong>Compétences :</strong> {item.skills.join(' · ')}
+              <div className={styles.skillsChipContainer}>
+                {item.skills.map((skillName, skillIndex) => {
+                  const skillLower = skillName.toLowerCase();
+                  const path = skillPathMap.get(skillLower);
+                  if (path) {
+                    return (
+                      <Link key={skillIndex} href={path} passHref>
+                        <span className={`${styles.chip} ${styles.skillChip}`}>
+                          {skillName}
+                        </span>
+                      </Link>
+                    );
+                  } else {
+                    return (
+                      <span key={skillIndex} className={`${styles.chip} ${styles.skillChip} ${styles.nonClickableChip}`}>
+                        {skillName}
+                      </span>
+                    );
+                  }
+                })}
               </div>
             )}
           </VerticalTimelineElement>
