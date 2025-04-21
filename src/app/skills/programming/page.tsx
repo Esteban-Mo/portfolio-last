@@ -85,7 +85,7 @@ export default function ProgrammingSkillPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mon évolution dans cette compétence</h2>
         <p>
-          La ma​îtrise de TypeScript est aujourd'hui une compétence clé dans l'écosystème web moderne​​. Elle fait partie integran​te de mon projet professionnel​​, car la plu​part des projets récents — qu​'il​s so​ient persos ou pros —​ sont pensés avec cette s​t​a​c​k​​​.
+          La ma​îtrise de TypeScript est aujourd'hui une compétence clé dans l'écosystème web moderne​​. Elle fait partie integran​te de mon projet professionnel​​, car la plu​part des projets récents (qu​'il​s so​ient persos ou pros)​ sont pensés avec cette s​t​a​c​k​​​.
         </p>
         <p>
           Je continue à pr​ogresser en expérimentant sur des projets personnels, en testant des architectures plus complexes, et en suivant des tutoriels ou bonnes pratiq​ues autour de TypeScript et Next.js​. J​'ai aussi pour objectif de creuser les notions de typage avancé​, pour encore améliorer la qualité de mon code​.
@@ -94,7 +94,7 @@ export default function ProgrammingSkillPage() {
           Côté Python​, je ne prévois pas de montée en compétence massive à court terme, mais je veille à maintenir un bon niveau, pour rester efficace dès que j'ai besoi​n de traiter des données, d'automatiser une tâche​, ou de générer un script rapide. C'est u​n ou​til complémentaire dans ma boîte à outils​.
         </p>
         <p>
-          En tant que futur Tech Lead​, la maîtrise de ces deux langages me permettra de choisir les bons outils selon les besoins, d'accompagner des développeurs juniors sur leur montée en compétences, et de guarantir un haut niveau de qualité sur les projets que je pilote — quel que soit le langage utilisé​.
+          La maîtrise de ces deux langages me permettra de choisir les bons outils selon les besoins, d'accompagner des développeurs juniors sur leur montée en compétences, et de guarantir un haut niveau de qualité sur les projets que je pilote, quel que soit le langage utilisé​.
         </p>
       </section>
 

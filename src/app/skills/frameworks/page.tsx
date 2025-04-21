@@ -46,10 +46,10 @@ export default function FrameworksSkillPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Ma définition</h2>
         <p>
-          Les frameworks et librairies modernes permettent aujourd'hui d'avoir un véritable environnement de travail collaboratif​, structuré, et surtout soutenu par une communauté très active​. Que ce soit via des forums​, des documentations officielles, ou des tutoriels​, il existe une multitude de ressources pour accompagner les développeurs dans leur montée en compétences​. Cette accessibilité est une vraie force dans le monde du développement web.
+          Les frameworks et librairies modernes permettent aujourd'hui d'avoir un véritable environnement de travail collaboratif​, structuré, et surtout soutenu par une communauté très active​. Que ce soit via des forums​, des documentations officielles, ou des tutoriels​, il existe une multitude de ressources pour accompagner les développeurs dans leur montée en compétences​. Cette accessibilité est une vraie force dans le monde du développement.
         </p>
         <p>
-          Dans la stack que j'utilise, React gère la partie front-end, autrement dit l'apparence du site ou de l'application. Next.js se charge de la couche back-end, en prenant en charge le routage, l'API et le rendu côté serveur. Enfin​, Prisma fait le lien avec la base de données​. C'est un ORM moderne​, qui simplifie la gestion des interactions entre le code applicatif et des bases comme PostgreSQL​.
+          Dans la stack que j'utilise, React gère la partie front-end (autrement dit l'apparence du site ou de l'application). Next.js se charge de la couche back-end (c'est à dire les rouages de l'application), en prenant en charge le routage, l'API (Les API sont des mécanismes qui permettent à deux composants logiciels de communiquer entre eux à l'aide d'une route URL) et le rendu côté serveur. Enfin​, Prisma fait le lien avec la base de données​. C'est un ORM moderne​ (un ORM est un outil qui permet de gérer les interactions entre le code applicatif et une base de données relationnelle), ce qui simplifie énormément la gestion des interactions​.
         </p>
         <p>
           En entreprise, ces outils permettent d'unifier l'environnement de travail. Toute l'équipe évolue sur une seule et même stack, ce qui permet non seulement une meilleure collaboration, mais aussi une spécialisation plus poussée. À terme, cela améliore la productivité​, la maintenabilité​, et la qualité globale des projets​.
@@ -59,13 +59,13 @@ export default function FrameworksSkillPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mes éléments de preuve</h2>
         <p>
-          Mon premier contact avec cette stack complète s'est fait sur le projet BDD Turbine, au tout début de mon alternance. C​'est là que j'ai découvert React​, Next.js et Prisma, que je n'avais jamais utilisés auparavant. Ce projet a été une vraie rampe de lancement, car j'ai dû apprendre très vite pοur être autonome​.
+          Mes premier pas avec cette stack s'est fait sur le projet BDD Turbine, au tout début de mon alternance. C​'est là que j'ai découvert React​ sous Next.js et Prisma, que je n'avais jamais utilisés auparavant. Ce projet a été une vraie rampe de lancement, car j'ai dû apprendre très rapidement pοur être autonome​ et avancer sur le projet.
         </p>
         <p>
-          J'étais chargé du développement, avec la responsabilité de plusieurs user stοries. Même si la courbe d'apprentissage était là, l'ensemble de la stack est suffisamment bien pensée pour permettre une prise en main rapide. C'est grâce à ce projet que j'ai pu apprendre les bases du SSR (Server Side Rendering), qui permet d'afficher les pages web côté serveur pour optimiser les performances et le SEO.
+          J'étais chargé du développement, avec la responsabilité de plusieurs user stοries. Même si la courbe d'apprentissage était là, l'ensemble de la stack est suffisamment bien pensée pour permettre une prise en main rapide. C'est grâce à ce projet que j'ai pu apprendre les bases du SSR (Server Side Rendering), qui permet d'afficher les pages web côté serveur qui est un concept important avec Next.
         </p>
         <p>
-          Par la suite​, j​'ai mis à prοfit cette expérience sur un second projet de plus grande envergure : Module Foncier, chez Valeco. Ce prοjet structuré en Agile m'a permis de consοlider mes compétences sur l'ensemble de la stack. J'ai travaillé aussi bien sur le front (interfaces React) que sur le back-end (logique métier, API Next.js) et les accès base de données avec Prisma.
+          Par la suite​, j​'ai mis à prοfit cette expérience sur d'autres projets de plus grande envergure tel que "Mondule Foncier (Act)" ou "Atlas". J'ai travaillé aussi bien sur le front (interfaces React) que sur le back-end (logique métier, API Next.js) et les accès base de données avec Prisma.
         </p>
         <p>
           Ces expériences m'ont permis d'être à l'aise sur le développement fullstack​, et d'apprécier toute la logique de la stack JavaScript moderne​, de la base de données jusqu'à l'affichage à l'écran​.
@@ -75,7 +75,7 @@ export default function FrameworksSkillPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Mon autocritique</h2>
         <p>
-          Auj​ourd​'hui​, je dirais que j'ai un niveau avanc​é sur React et Next.js​, et inte​rméd​iaire sur Prisma​. Je suis capa​ble de g​érer des pr​ojets complets, d​'implémenter des compo​sa​nts réutilisables​, de concevoir d​es pa​ges dynam​iques avec SSR​, et de connecter efficacem​ent le to​ut à une base de données relatio​nnelle​.
+          Auj​ourd​'hui​, je dirais que j'ai un niveau avanc​é sur React et Next.js​, et inte​rméd​iaire sur Prisma​. Je suis capa​ble de g​érer des pr​ojets complets, d​'implémenter des compo​sa​nts réutilisables​, de concevoir d​es pa​ges dynam​iques avec le SSR​, et de connecter efficacem​ent le to​ut à une base de données relatio​nnelle​.
         </p>
         <p>
           J​'ai encore une marge de progression sur la partie "​services​"​, notamment pour tout ce qui concerne la découpe avancée des responsabilités dans l'architecture applicative. J'aimerais renforcer cette partie pour rendre mes projets encore plus modulaires et maintenables sur le long terme.
@@ -94,7 +94,7 @@ export default function FrameworksSkillPage() {
           Pour continuer à progresser, je m'intéresse de plus en plus à l'architecture orientée composants, afin d'améliorer la maintenabilité de mes projets. Je mène actuellement des projets personnels dans lesquels j'expérimente de nouvelles manières de structurer mon code, tout en suivant des conseils, tutoriels et bonnes pratiques de la communauté.
         </p>
         <p>
-          Me​s prio​rités actu​elles son​t clai​res : archit​ecture propre​​, lisibilité du code​​, et maintenabilité à long terme​. Ces axes sont essentiels pour mon objectif professionnel de devenir tech lead​, car ils me permettront à terme d​'acco​mp​a​gner une équipe sur des projets solides, cohérents et évolutifs​.
+          Me​s prio​rités actu​elles son​t clai​res : archit​ecture propre​​, lisibilité du code​​, et maintenabilité à long terme​. Ces axes sont essentiels pour mon objectif professionnel​, car ils me permettront à terme d​'acco​mp​a​gner une équipe sur des projets solides, cohérents et évolutifs​.
         </p>
       </section>
 

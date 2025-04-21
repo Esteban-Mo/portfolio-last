@@ -44,7 +44,7 @@ export default function GeographicsSkillPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Ma definition</h2>
         <p>
-          Les systèmes géographiques sont des outils essentiels dès qu'un projet implique de manipuler, afficher ou distribuer des données spatiales : coordonnées, adresses, surfaces​, couches superposées, etc. Dans mon cas​, je les ai utilisés dans plusieurs contextes réels — que ce soit pour des domaines viticoles, de l'immobilier ou de la production énergétique — ce qui m'a permis de bien cerner l'utilité concrète de la cartographie dans un projet web​.
+          Les systèmes géographiques sont des outils essentiels dès qu'un projet implique de manipuler, afficher ou distribuer des données spatiales : coordonnées, adresses, surfaces​, couches superposées, etc. Dans mon cas​, je les ai utilisés dans plusieurs contextes réels, que ce soit pour des domaines viticoles, de l'immobilier ou de la production énergétique... c'est ce qui m'a permis de bien cerner l'utilité concrète de la cartographie dans un projet web​.
         </p>
         <p>
           J'ai principalement utilise deux technologies complémentaires :
